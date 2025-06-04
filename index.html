@@ -1054,6 +1054,7 @@
       <div style="display: flex; gap: 12px;">
         <button type="button" class="btn btn-secondary" onclick="previewDocument()">Preview Document</button>
         <button type="button" class="btn btn-primary" onclick="downloadDocument()">Generate PDF</button>
+        <button type="button" class="btn btn-secondary" onclick="clearForm()">Clear All</button>
       </div>
     </div>
 
@@ -1609,6 +1610,73 @@
           '• Generated documents remain on your device\n\n' +
           'Your data stays private and secure.'
       );
+    }
+
+    function clearForm() {
+      // 1. Reset the form itself:
+      const form = document.getElementById('sowForm');
+      form.reset();
+
+      // 2. Remove all deliverable cards except one, then blank out that first one:
+      const deliverablesContainer = document.getElementById('deliverables');
+      while (deliverablesContainer.firstChild) {
+        deliverablesContainer.removeChild(deliverablesContainer.firstChild);
+      }
+      const card = document.createElement('div');
+      card.className = 'deliverable-card';
+      card.innerHTML = `
+        <div class="deliverable-header">
+          <span class="deliverable-number">Deliverable 1</span>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Deliverable Description</label>
+            <input type="text" name="deliverable[]" class="form-input" placeholder="e.g., Current State Assessment Report" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Target Delivery Date</label>
+            <input type="date" name="deliverableDate[]" class="form-input" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Description & Format</label>
+          <textarea name="deliverableDesc[]" class="form-textarea" rows="2" placeholder="Detailed description of format, content, and delivery method..."></textarea>
+        </div>`;
+      deliverablesContainer.appendChild(card);
+      deliverableCount = 1;
+
+      // 3. Clear any uploaded logo & restore the placeholder:
+      uploadedLogo = null;
+      companyName = '';
+      const logoPlaceholder = document.getElementById('logoPlaceholder');
+      logoPlaceholder.innerHTML = '<input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo" /><span id="logoIcon">🏢</span>';
+      const freshUpload = document.getElementById('logoUpload');
+      freshUpload.addEventListener('change', function (e) {
+        const file = e.target.files[0];
+        if (file && file.type.startsWith('image/')) {
+          const reader = new FileReader();
+          reader.onload = function (event) {
+            uploadedLogo = event.target.result;
+            logoPlaceholder.innerHTML =
+              '<input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo" />' +
+              '<img src="' + uploadedLogo + '" alt="Company Logo" class="logo-image" />';
+            const newLogoUpload = document.getElementById('logoUpload');
+            newLogoUpload.addEventListener('change', arguments.callee);
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      // 4. Clear the company‐name header and sync it:
+      document.getElementById('headerCompanyName').value = '';
+      document.getElementById('companyName').value = '';
+
+      // 5. Delete anything saved in localStorage:
+      localStorage.removeItem('sowGeneratorData');
+
+      // 6. Reset progress bar & status indicator:
+      updateProgress();
+      updateCompletionStatus();
     }
 
     // Close preview if clicking outside the content or pressing Escape
