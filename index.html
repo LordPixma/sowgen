@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Scope of Work Generator | Professional SOW Documents</title>
-  <meta name="description" content="Generate professional Scope of Work documents with our McKinsey-style template. Perfect for consultants, agencies, and service providers.">
-  <meta name="keywords" content="scope of work, SOW generator, consulting, project management, professional documents">
-  
+  <meta name="description" content="Generate professional Scope of Work documents with our McKinsey-style template. Perfect for consultants, agencies, and service providers." />
+  <meta name="keywords" content="scope of work, SOW generator, consulting, project management, professional documents" />
+
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📋%3C/text%3E%3C/svg%3E">
-  
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📋%3C/text%3E%3C/svg%3E"
+  />
+
   <!-- Open Graph -->
-  <meta property="og:title" content="Scope of Work Generator">
-  <meta property="og:description" content="Generate professional Scope of Work documents with our McKinsey-style template">
-  <meta property="og:type" content="website">
-  
+  <meta property="og:title" content="Scope of Work Generator" />
+  <meta property="og:description" content="Generate professional Scope of Work documents with our McKinsey-style template" />
+  <meta property="og:type" content="website" />
+
   <!-- Preload Inter font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
   <style>
     * {
       margin: 0;
@@ -409,9 +413,17 @@
       margin-right: 8px;
     }
 
-    .status-complete { background: #10b981; }
-    .status-partial { background: #f59e0b; }
-    .status-empty { background: #ef4444; }
+    .status-complete {
+      background: #10b981;
+    }
+
+    .status-partial {
+      background: #f59e0b;
+    }
+
+    .status-empty {
+      background: #ef4444;
+    }
 
     .footer {
       background: #0f172a;
@@ -579,7 +591,9 @@
     }
 
     @keyframes spin {
-      to { transform: rotate(360deg); }
+      to {
+        transform: rotate(360deg);
+      }
     }
 
     @media (max-width: 768px) {
@@ -626,10 +640,16 @@
       <div class="header-content">
         <div class="logo-section">
           <div class="logo-placeholder" id="logoPlaceholder">
-            <input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo">
+            <input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo" />
             <span id="logoIcon">🏢</span>
           </div>
-          <input type="text" id="headerCompanyName" class="company-name-input" placeholder="Your Company Name" aria-label="Company name">
+          <input
+            type="text"
+            id="headerCompanyName"
+            class="company-name-input"
+            placeholder="Your Company Name"
+            aria-label="Company name"
+          />
         </div>
         <h1>Scope of Work Generator</h1>
         <p class="subtitle">Create professional project documentation with precision and clarity</p>
@@ -641,7 +661,7 @@
 
     <form id="sowForm" class="form-container">
       <div class="form-grid">
-        <!-- Project Information -->
+        <!-- 1. Project Information -->
         <div class="section-card">
           <div class="section-header">
             <div class="section-number">1</div>
@@ -649,7 +669,14 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="projectTitle">Project Title</label>
-            <input type="text" id="projectTitle" name="projectTitle" class="form-input" placeholder="Enter the project name" required>
+            <input
+              type="text"
+              id="projectTitle"
+              name="projectTitle"
+              class="form-input"
+              placeholder="Enter the project name"
+              required
+            />
             <div class="form-hint">This will appear as the main heading in your SOW document</div>
           </div>
           <div class="form-row">
@@ -678,7 +705,299 @@
           </div>
         </div>
 
-        <!-- Governance & Terms -->
+        <!-- 2. Client Information -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-number">2</div>
+            <h3 class="section-title">Client Information</h3>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="clientName">Client Organization</label>
+              <input
+                type="text"
+                id="clientName"
+                name="clientName"
+                class="form-input"
+                placeholder="Company or organization name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="clientContact">Primary Contact</label>
+              <input type="text" id="clientContact" name="clientContact" class="form-input" placeholder="Contact person name" />
+            </div>
+          </div>
+          <div class="form-row-3">
+            <div class="form-group">
+              <label class="form-label" for="clientEmail">Email Address</label>
+              <input
+                type="email"
+                id="clientEmail"
+                name="clientEmail"
+                class="form-input"
+                placeholder="contact@client.com"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="clientPhone">Phone Number</label>
+              <input
+                type="text"
+                id="clientPhone"
+                name="clientPhone"
+                class="form-input"
+                placeholder="+1 (555) 123-4567"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="clientTitle">Contact Title</label>
+              <input
+                type="text"
+                id="clientTitle"
+                name="clientTitle"
+                class="form-input"
+                placeholder="e.g., Project Director"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Service Provider Information -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-number">3</div>
+            <h3 class="section-title">Service Provider</h3>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="companyName">Your Organization</label>
+              <input
+                type="text"
+                id="companyName"
+                name="companyName"
+                class="form-input"
+                placeholder="Your company name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="projectManager">Engagement Manager</label>
+              <input
+                type="text"
+                id="projectManager"
+                name="projectManager"
+                class="form-input"
+                placeholder="Lead consultant name"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="companyEmail">Contact Email</label>
+              <input
+                type="email"
+                id="companyEmail"
+                name="companyEmail"
+                class="form-input"
+                placeholder="project@yourcompany.com"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="companyPhone">Contact Phone</label>
+              <input
+                type="text"
+                id="companyPhone"
+                name="companyPhone"
+                class="form-input"
+                placeholder="+1 (555) 987-6543"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Executive Summary -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-number">4</div>
+            <h3 class="section-title">Executive Summary</h3>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="executiveSummary">Project Overview</label>
+            <textarea
+              id="executiveSummary"
+              name="executiveSummary"
+              class="form-textarea"
+              rows="4"
+              placeholder="Provide a high-level summary of the project, its strategic importance, and expected outcomes..."
+              required
+            ></textarea>
+            <div class="form-hint">Keep this concise but comprehensive - it's often the first section stakeholders read</div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="businessCase">Business Case & Rationale</label>
+            <textarea
+              id="businessCase"
+              name="businessCase"
+              class="form-textarea"
+              rows="3"
+              placeholder="Explain the business justification and expected value creation..."
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- 5. Scope Definition -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-number">5</div>
+            <h3 class="section-title">Scope Definition</h3>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="workScope">Work to be Performed</label>
+            <textarea
+              id="workScope"
+              name="workScope"
+              class="form-textarea"
+              rows="5"
+              placeholder="Detail the specific activities, tasks, and methodologies to be employed..."
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="successCriteria">Success Criteria</label>
+            <textarea
+              id="successCriteria"
+              name="successCriteria"
+              class="form-textarea"
+              rows="3"
+              placeholder="Define measurable outcomes and key performance indicators..."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="outOfScope">Exclusions & Limitations</label>
+            <textarea
+              id="outOfScope"
+              name="outOfScope"
+              class="form-textarea"
+              rows="3"
+              placeholder="Clearly specify what is NOT included in this engagement..."
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- 6. Deliverables & Timeline -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-number">6</div>
+            <h3 class="section-title">Deliverables & Timeline</h3>
+          </div>
+          <div id="deliverables">
+            <div class="deliverable-card">
+              <div class="deliverable-header">
+                <span class="deliverable-number">Deliverable 1</span>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Deliverable Description</label>
+                  <input
+                    type="text"
+                    name="deliverable[]"
+                    class="form-input"
+                    placeholder="e.g., Current State Assessment Report"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Target Delivery Date</label>
+                  <input type="date" name="deliverableDate[]" class="form-input" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Description & Format</label>
+                <textarea
+                  name="deliverableDesc[]"
+                  class="form-textarea"
+                  rows="2"
+                  placeholder="Detailed description of format, content, and delivery method..."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="add-deliverable" onclick="addDeliverable()">
+            <span>+ Add Additional Deliverable</span>
+          </button>
+
+          <div style="margin-top: 32px;">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="startDate">Engagement Start Date</label>
+                <input type="date" id="startDate" name="startDate" class="form-input" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="endDate">Target Completion Date</label>
+                <input type="date" id="endDate" name="endDate" class="form-input" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="keyMilestones">Key Milestones & Dependencies</label>
+              <textarea
+                id="keyMilestones"
+                name="keyMilestones"
+                class="form-textarea"
+                rows="3"
+                placeholder="List critical milestones, dependencies, and checkpoint reviews..."
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Commercial Terms -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-number">7</div>
+            <h3 class="section-title">Commercial Terms</h3>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="totalBudget">Total Engagement Value</label>
+              <input
+                type="number"
+                id="totalBudget"
+                name="totalBudget"
+                class="form-input"
+                min="0"
+                step="0.01"
+                placeholder="0.00"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="currency">Currency</label>
+              <select id="currency" name="currency" class="form-select">
+                <option value="USD">USD ($)</option>
+                <option value="EUR">EUR (€)</option>
+                <option value="GBP">GBP (£)</option>
+                <option value="CAD">CAD (C$)</option>
+                <option value="AUD">AUD (A$)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="projectNumber">Project Reference</label>
+              <input
+                type="text"
+                id="projectNumber"
+                name="projectNumber"
+                class="form-input"
+                placeholder="e.g., PRJ-2025-001"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="projectDate">Document Date</label>
+              <input type="date" id="projectDate" name="projectDate" class="form-input" required />
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Governance & Terms -->
         <div class="section-card">
           <div class="section-header">
             <div class="section-number">8</div>
@@ -686,19 +1005,43 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="governance">Project Governance</label>
-            <textarea id="governance" name="governance" class="form-textarea" rows="3" placeholder="Describe reporting structure, communication protocols, and decision-making processes..."></textarea>
+            <textarea
+              id="governance"
+              name="governance"
+              class="form-textarea"
+              rows="3"
+              placeholder="Describe reporting structure, communication protocols, and decision-making processes..."
+            ></textarea>
           </div>
           <div class="form-group">
             <label class="form-label" for="assumptions">Key Assumptions</label>
-            <textarea id="assumptions" name="assumptions" class="form-textarea" rows="3" placeholder="List critical assumptions underlying this scope and approach..."></textarea>
+            <textarea
+              id="assumptions"
+              name="assumptions"
+              class="form-textarea"
+              rows="3"
+              placeholder="List critical assumptions underlying this scope and approach..."
+            ></textarea>
           </div>
           <div class="form-group">
             <label class="form-label" for="risks">Risk Factors</label>
-            <textarea id="risks" name="risks" class="form-textarea" rows="3" placeholder="Identify potential risks and mitigation strategies..."></textarea>
+            <textarea
+              id="risks"
+              name="risks"
+              class="form-textarea"
+              rows="3"
+              placeholder="Identify potential risks and mitigation strategies..."
+            ></textarea>
           </div>
           <div class="form-group">
             <label class="form-label" for="terms">Additional Terms & Conditions</label>
-            <textarea id="terms" name="terms" class="form-textarea" rows="4" placeholder="Include any additional contractual terms, confidentiality requirements, or special conditions..."></textarea>
+            <textarea
+              id="terms"
+              name="terms"
+              class="form-textarea"
+              rows="4"
+              placeholder="Include any additional contractual terms, confidentiality requirements, or special conditions..."
+            ></textarea>
           </div>
         </div>
       </div>
@@ -715,7 +1058,11 @@
     </div>
 
     <div class="footer">
-      <p>Built for professional consulting firms and service providers | <a href="#" onclick="showAbout()">About</a> | <a href="#" onclick="showPrivacy()">Privacy</a></p>
+      <p>
+        Built for professional consulting firms and service providers |
+        <a href="#" onclick="showAbout()">About</a> |
+        <a href="#" onclick="showPrivacy()">Privacy</a>
+      </p>
     </div>
   </div>
 
@@ -735,25 +1082,30 @@
   </div>
 
   <!-- Include html2pdf.js via CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"
+    integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
 
   <script>
     let deliverableCount = 1;
     let uploadedLogo = null;
     let companyName = '';
 
-    document.addEventListener('DOMContentLoaded', function() {
-      // Set today's date
+    document.addEventListener('DOMContentLoaded', function () {
+      // Set today's date in the documentDate field
       document.getElementById('projectDate').valueAsDate = new Date();
-      
+
       // Initialize progress tracking
       updateProgress();
       updateCompletionStatus();
 
-      // Add event listeners to all form inputs
+      // Add event listeners to all form inputs to update progress/status
       const inputs = document.querySelectorAll('input, textarea, select');
-      inputs.forEach(function(input) {
-        input.addEventListener('input', function() {
+      inputs.forEach(function (input) {
+        input.addEventListener('input', function () {
           updateProgress();
           updateCompletionStatus();
         });
@@ -763,29 +1115,19 @@
       const logoUpload = document.getElementById('logoUpload');
       const logoPlaceholder = document.getElementById('logoPlaceholder');
 
-      logoUpload.addEventListener('change', function(e) {
+      logoUpload.addEventListener('change', function (e) {
         const file = e.target.files[0];
         if (file && file.type.startsWith('image/')) {
           const reader = new FileReader();
-          reader.onload = function(event) {
+          reader.onload = function (event) {
             uploadedLogo = event.target.result;
-            logoPlaceholder.innerHTML = '<input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo"><img src="' + uploadedLogo + '" alt="Company Logo" class="logo-image">';
-            
-            // Re-attach the event listener
+            logoPlaceholder.innerHTML =
+              '<input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo" />' +
+              '<img src="' + uploadedLogo + '" alt="Company Logo" class="logo-image" />';
+
+            // Re‐assign the event listener on the newly inserted input
             const newLogoUpload = document.getElementById('logoUpload');
-            newLogoUpload.addEventListener('change', function(e) {
-              const file = e.target.files[0];
-              if (file && file.type.startsWith('image/')) {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                  uploadedLogo = event.target.result;
-                  logoPlaceholder.innerHTML = '<input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo"><img src="' + uploadedLogo + '" alt="Company Logo" class="logo-image">';
-                  const newerLogoUpload = document.getElementById('logoUpload');
-                  newerLogoUpload.addEventListener('change', arguments.callee);
-                };
-                reader.readAsDataURL(file);
-              }
-            });
+            newLogoUpload.addEventListener('change', arguments.callee);
           };
           reader.readAsDataURL(file);
         }
@@ -795,19 +1137,19 @@
       const headerCompanyInput = document.getElementById('headerCompanyName');
       const formCompanyInput = document.getElementById('companyName');
 
-      headerCompanyInput.addEventListener('input', function() {
+      headerCompanyInput.addEventListener('input', function () {
         companyName = this.value;
         formCompanyInput.value = this.value;
         updateProgress();
         updateCompletionStatus();
       });
 
-      formCompanyInput.addEventListener('input', function() {
+      formCompanyInput.addEventListener('input', function () {
         companyName = this.value;
         headerCompanyInput.value = this.value;
       });
 
-      // Auto-save to localStorage
+      // Auto-save to localStorage every 30s
       setInterval(autoSave, 30000);
       loadSavedData();
     });
@@ -842,32 +1184,35 @@
         const saved = localStorage.getItem('sowGeneratorData');
         if (saved) {
           const data = JSON.parse(saved);
-          Object.keys(data).forEach(function(key) {
+          Object.keys(data).forEach(function (key) {
             const element = document.querySelector('[name="' + key + '"]');
             if (element && !Array.isArray(data[key])) {
               element.value = data[key];
             }
           });
-          
+
           if (data.companyName) {
             document.getElementById('headerCompanyName').value = data.companyName;
             document.getElementById('companyName').value = data.companyName;
             companyName = data.companyName;
           }
-          
+
           if (data.uploadedLogo) {
             uploadedLogo = data.uploadedLogo;
             const logoPlaceholder = document.getElementById('logoPlaceholder');
-            logoPlaceholder.innerHTML = '<input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo"><img src="' + uploadedLogo + '" alt="Company Logo" class="logo-image">';
-            
+            logoPlaceholder.innerHTML =
+              '<input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo" />' +
+              '<img src="' + uploadedLogo + '" alt="Company Logo" class="logo-image" />';
             const newLogoUpload = document.getElementById('logoUpload');
-            newLogoUpload.addEventListener('change', function(e) {
+            newLogoUpload.addEventListener('change', function (e) {
               const file = e.target.files[0];
               if (file && file.type.startsWith('image/')) {
                 const reader = new FileReader();
-                reader.onload = function(event) {
+                reader.onload = function (event) {
                   uploadedLogo = event.target.result;
-                  logoPlaceholder.innerHTML = '<input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo"><img src="' + uploadedLogo + '" alt="Company Logo" class="logo-image">';
+                  logoPlaceholder.innerHTML =
+                    '<input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo" />' +
+                    '<img src="' + uploadedLogo + '" alt="Company Logo" class="logo-image" />';
                   const newerLogoUpload = document.getElementById('logoUpload');
                   newerLogoUpload.addEventListener('change', arguments.callee);
                 };
@@ -875,7 +1220,7 @@
               }
             });
           }
-          
+
           updateProgress();
           updateCompletionStatus();
         }
@@ -889,12 +1234,32 @@
       const deliverables = document.getElementById('deliverables');
       const card = document.createElement('div');
       card.className = 'deliverable-card';
-      card.innerHTML = '<div class="deliverable-header"><span class="deliverable-number">Deliverable ' + deliverableCount + '</span><button type="button" class="remove-deliverable" onclick="removeDeliverable(this)">Remove</button></div><div class="form-row"><div class="form-group"><label class="form-label">Deliverable Description</label><input type="text" name="deliverable[]" class="form-input" placeholder="e.g., Implementation Roadmap"></div><div class="form-group"><label class="form-label">Target Delivery Date</label><input type="date" name="deliverableDate[]" class="form-input"></div></div><div class="form-group"><label class="form-label">Description & Format</label><textarea name="deliverableDesc[]" class="form-textarea" rows="2" placeholder="Detailed description of format, content, and delivery method..."></textarea></div>';
+      card.innerHTML = `
+        <div class="deliverable-header">
+          <span class="deliverable-number">Deliverable ${deliverableCount}</span>
+          <button type="button" class="remove-deliverable" onclick="removeDeliverable(this)">Remove</button>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Deliverable Description</label>
+            <input type="text" name="deliverable[]" class="form-input" placeholder="e.g., Implementation Roadmap" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Target Delivery Date</label>
+            <input type="date" name="deliverableDate[]" class="form-input" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Description & Format</label>
+          <textarea name="deliverableDesc[]" class="form-textarea" rows="2" placeholder="Detailed description of format, content, and delivery method..."></textarea>
+        </div>
+      `;
       deliverables.appendChild(card);
 
+      // Re‐attach input listeners for the new fields
       const newFields = card.querySelectorAll('input, textarea');
-      newFields.forEach(function(field) {
-        field.addEventListener('input', function() {
+      newFields.forEach(function (field) {
+        field.addEventListener('input', function () {
           updateProgress();
           updateCompletionStatus();
         });
@@ -910,7 +1275,7 @@
 
     function updateDeliverableNumbers() {
       const cards = document.querySelectorAll('.deliverable-card');
-      cards.forEach(function(card, index) {
+      cards.forEach(function (card, index) {
         const span = card.querySelector('.deliverable-number');
         span.textContent = 'Deliverable ' + (index + 1);
       });
@@ -920,10 +1285,10 @@
     function updateProgress() {
       const requiredFields = document.querySelectorAll('input[required], textarea[required]');
       let completed = 0;
-      requiredFields.forEach(function(field) {
+      requiredFields.forEach(function (field) {
         if (field.value.trim() !== '') completed++;
       });
-      const pct = (completed / requiredFields.length) * 100;
+      const pct = requiredFields.length ? (completed / requiredFields.length) * 100 : 0;
       document.getElementById('progressFill').style.width = pct + '%';
     }
 
@@ -931,10 +1296,10 @@
       const allFields = document.querySelectorAll('input, textarea, select');
       let filled = 0;
       const total = allFields.length;
-      allFields.forEach(function(field) {
+      allFields.forEach(function (field) {
         if (field.value.trim() !== '') filled++;
       });
-      const pct = Math.round((filled / total) * 100);
+      const pct = total ? Math.round((filled / total) * 100) : 0;
       const statusEl = document.getElementById('completionStatus');
       if (pct < 30) {
         statusEl.innerHTML = '<span class="status-indicator status-empty"></span>Document ' + pct + '% complete';
@@ -948,1354 +1313,213 @@
     function previewDocument() {
       const formData = new FormData(document.getElementById('sowForm'));
 
+      // Build deliverables HTML
       const descEls = document.querySelectorAll('input[name="deliverable[]"]');
       const dateEls = document.querySelectorAll('input[name="deliverableDate[]"]');
       const detailsEls = document.querySelectorAll('textarea[name="deliverableDesc[]"]');
       let deliverablesHtml = '';
-      
       for (let i = 0; i < descEls.length; i++) {
         if (descEls[i].value.trim()) {
-          deliverablesHtml += '<div style="margin-bottom:20px; padding:16px; background:#f8fafc; border-radius:8px; border-left:4px solid #0f172a;"><p style="margin:0 0 8px 0;"><strong>' + (i + 1) + '. ' + descEls[i].value + '</strong></p>';
+          deliverablesHtml +=
+            `<div style="margin-bottom:20px; padding:16px; background:#f8fafc; border-radius:8px; border-left:4px solid #0f172a;">
+               <p style="margin:0 0 8px 0;"><strong>${i + 1}. ${descEls[i].value}</strong></p>`;
           if (dateEls[i].value) {
-            deliverablesHtml += '<p style="margin:0 0 8px 0; color:#6b7280; font-size:14px;"><strong>Target Date:</strong> ' + new Date(dateEls[i].value).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) + '</p>';
+            deliverablesHtml +=
+              `<p style="margin:0 0 8px 0; color:#6b7280; font-size:14px;">
+                 <strong>Target Date:</strong> ${new Date(dateEls[i].value).toLocaleDateString('en-US', {
+                   year: 'numeric',
+                   month: 'long',
+                   day: 'numeric'
+                 })}
+               </p>`;
           }
           if (detailsEls[i].value) {
-            deliverablesHtml += '<p style="margin:0; color:#374151; font-size:14px;">' + detailsEls[i].value + '</p>';
+            deliverablesHtml +=
+              `<p style="margin:0; color:#374151; font-size:14px;">${detailsEls[i].value}</p>`;
           }
-          deliverablesHtml += '</div>';
+          deliverablesHtml += `</div>`;
         }
       }
 
-      const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-      const currency = formData.get('currency') || 'USD';
-      const currencyMap = { USD: '
-            <div class="form-group">
-              <label class="form-label" for="projectNumber">Project Reference</label>
-              <input type="text" id="projectNumber" name="projectNumber" class="form-input" placeholder="e.g., PRJ-2025-001">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="projectDate">Document Date</label>
-              <input type="date" id="projectDate" name="projectDate" class="form-input" required>
-            </div>
-          </div>
-        </div>
-
-        <!-- Client Information -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">2</div>
-            <h3 class="section-title">Client Information</h3>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="clientName">Client Organization</label>
-              <input type="text" id="clientName" name="clientName" class="form-input" placeholder="Company or organization name" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="clientContact">Primary Contact</label>
-              <input type="text" id="clientContact" name="clientContact" class="form-input" placeholder="Contact person name">
-            </div>
-          </div>
-          <div class="form-row-3">
-            <div class="form-group">
-              <label class="form-label" for="clientEmail">Email Address</label>
-              <input type="email" id="clientEmail" name="clientEmail" class="form-input" placeholder="contact@client.com">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="clientPhone">Phone Number</label>
-              <input type="text" id="clientPhone" name="clientPhone" class="form-input" placeholder="+1 (555) 123-4567">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="clientTitle">Contact Title</label>
-              <input type="text" id="clientTitle" name="clientTitle" class="form-input" placeholder="e.g., Project Director">
-            </div>
-          </div>
-        </div>
-
-        <!-- Service Provider Information -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">3</div>
-            <h3 class="section-title">Service Provider</h3>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="companyName">Your Organization</label>
-              <input type="text" id="companyName" name="companyName" class="form-input" placeholder="Your company name" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="projectManager">Engagement Manager</label>
-              <input type="text" id="projectManager" name="projectManager" class="form-input" placeholder="Lead consultant name">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="companyEmail">Contact Email</label>
-              <input type="email" id="companyEmail" name="companyEmail" class="form-input" placeholder="project@yourcompany.com">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="companyPhone">Contact Phone</label>
-              <input type="text" id="companyPhone" name="companyPhone" class="form-input" placeholder="+1 (555) 987-6543">
-            </div>
-          </div>
-        </div>
-
-        <!-- Executive Summary -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">4</div>
-            <h3 class="section-title">Executive Summary</h3>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="executiveSummary">Project Overview</label>
-            <textarea id="executiveSummary" name="executiveSummary" class="form-textarea" rows="4" placeholder="Provide a high-level summary of the project, its strategic importance, and expected outcomes..." required></textarea>
-            <div class="form-hint">Keep this concise but comprehensive - it's often the first section stakeholders read</div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="businessCase">Business Case & Rationale</label>
-            <textarea id="businessCase" name="businessCase" class="form-textarea" rows="3" placeholder="Explain the business justification and expected value creation..."></textarea>
-          </div>
-        </div>
-
-        <!-- Scope Definition -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">5</div>
-            <h3 class="section-title">Scope Definition</h3>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="workScope">Work to be Performed</label>
-            <textarea id="workScope" name="workScope" class="form-textarea" rows="5" placeholder="Detail the specific activities, tasks, and methodologies to be employed..." required></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="successCriteria">Success Criteria</label>
-            <textarea id="successCriteria" name="successCriteria" class="form-textarea" rows="3" placeholder="Define measurable outcomes and key performance indicators..."></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="outOfScope">Exclusions & Limitations</label>
-            <textarea id="outOfScope" name="outOfScope" class="form-textarea" rows="3" placeholder="Clearly specify what is NOT included in this engagement..."></textarea>
-          </div>
-        </div>
-
-        <!-- Deliverables & Timeline -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">6</div>
-            <h3 class="section-title">Deliverables & Timeline</h3>
-          </div>
-          <div id="deliverables">
-            <div class="deliverable-card">
-              <div class="deliverable-header">
-                <span class="deliverable-number">Deliverable 1</span>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label">Deliverable Description</label>
-                  <input type="text" name="deliverable[]" class="form-input" placeholder="e.g., Current State Assessment Report">
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Target Delivery Date</label>
-                  <input type="date" name="deliverableDate[]" class="form-input">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Description & Format</label>
-                <textarea name="deliverableDesc[]" class="form-textarea" rows="2" placeholder="Detailed description of format, content, and delivery method..."></textarea>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="add-deliverable" onclick="addDeliverable()">
-            <span>+ Add Additional Deliverable</span>
-          </button>
-
-          <div style="margin-top: 32px;">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="startDate">Engagement Start Date</label>
-                <input type="date" id="startDate" name="startDate" class="form-input" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="endDate">Target Completion Date</label>
-                <input type="date" id="endDate" name="endDate" class="form-input" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="keyMilestones">Key Milestones & Dependencies</label>
-              <textarea id="keyMilestones" name="keyMilestones" class="form-textarea" rows="3" placeholder="List critical milestones, dependencies, and checkpoint reviews..."></textarea>
-            </div>
-          </div>
-        </div>
-
-        <!-- Commercial Terms -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">7</div>
-            <h3 class="section-title">Commercial Terms</h3>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="totalBudget">Total Engagement Value</label>
-              <input type="number" id="totalBudget" name="totalBudget" class="form-input" min="0" step="0.01" placeholder="0.00">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="currency">Currency</label>
-              <select id="currency" name="currency" class="form-select">
-                <option value="USD">USD ($)</option>
-                <option value="EUR">EUR (€)</option>
-                <option value="GBP">GBP (£)</option>
-                <option value="CAD">CAD (C$)</option>
-                <option value="AUD">AUD (A$)</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row">, EUR: '€', GBP: '£', CAD: 'C
-            <div class="form-group">
-              <label class="form-label" for="projectNumber">Project Reference</label>
-              <input type="text" id="projectNumber" name="projectNumber" class="form-input" placeholder="e.g., PRJ-2025-001">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="projectDate">Document Date</label>
-              <input type="date" id="projectDate" name="projectDate" class="form-input" required>
-            </div>
-          </div>
-        </div>
-
-        <!-- Client Information -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">2</div>
-            <h3 class="section-title">Client Information</h3>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="clientName">Client Organization</label>
-              <input type="text" id="clientName" name="clientName" class="form-input" placeholder="Company or organization name" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="clientContact">Primary Contact</label>
-              <input type="text" id="clientContact" name="clientContact" class="form-input" placeholder="Contact person name">
-            </div>
-          </div>
-          <div class="form-row-3">
-            <div class="form-group">
-              <label class="form-label" for="clientEmail">Email Address</label>
-              <input type="email" id="clientEmail" name="clientEmail" class="form-input" placeholder="contact@client.com">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="clientPhone">Phone Number</label>
-              <input type="text" id="clientPhone" name="clientPhone" class="form-input" placeholder="+1 (555) 123-4567">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="clientTitle">Contact Title</label>
-              <input type="text" id="clientTitle" name="clientTitle" class="form-input" placeholder="e.g., Project Director">
-            </div>
-          </div>
-        </div>
-
-        <!-- Service Provider Information -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">3</div>
-            <h3 class="section-title">Service Provider</h3>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="companyName">Your Organization</label>
-              <input type="text" id="companyName" name="companyName" class="form-input" placeholder="Your company name" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="projectManager">Engagement Manager</label>
-              <input type="text" id="projectManager" name="projectManager" class="form-input" placeholder="Lead consultant name">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="companyEmail">Contact Email</label>
-              <input type="email" id="companyEmail" name="companyEmail" class="form-input" placeholder="project@yourcompany.com">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="companyPhone">Contact Phone</label>
-              <input type="text" id="companyPhone" name="companyPhone" class="form-input" placeholder="+1 (555) 987-6543">
-            </div>
-          </div>
-        </div>
-
-        <!-- Executive Summary -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">4</div>
-            <h3 class="section-title">Executive Summary</h3>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="executiveSummary">Project Overview</label>
-            <textarea id="executiveSummary" name="executiveSummary" class="form-textarea" rows="4" placeholder="Provide a high-level summary of the project, its strategic importance, and expected outcomes..." required></textarea>
-            <div class="form-hint">Keep this concise but comprehensive - it's often the first section stakeholders read</div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="businessCase">Business Case & Rationale</label>
-            <textarea id="businessCase" name="businessCase" class="form-textarea" rows="3" placeholder="Explain the business justification and expected value creation..."></textarea>
-          </div>
-        </div>
-
-        <!-- Scope Definition -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">5</div>
-            <h3 class="section-title">Scope Definition</h3>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="workScope">Work to be Performed</label>
-            <textarea id="workScope" name="workScope" class="form-textarea" rows="5" placeholder="Detail the specific activities, tasks, and methodologies to be employed..." required></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="successCriteria">Success Criteria</label>
-            <textarea id="successCriteria" name="successCriteria" class="form-textarea" rows="3" placeholder="Define measurable outcomes and key performance indicators..."></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="outOfScope">Exclusions & Limitations</label>
-            <textarea id="outOfScope" name="outOfScope" class="form-textarea" rows="3" placeholder="Clearly specify what is NOT included in this engagement..."></textarea>
-          </div>
-        </div>
-
-        <!-- Deliverables & Timeline -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">6</div>
-            <h3 class="section-title">Deliverables & Timeline</h3>
-          </div>
-          <div id="deliverables">
-            <div class="deliverable-card">
-              <div class="deliverable-header">
-                <span class="deliverable-number">Deliverable 1</span>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label">Deliverable Description</label>
-                  <input type="text" name="deliverable[]" class="form-input" placeholder="e.g., Current State Assessment Report">
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Target Delivery Date</label>
-                  <input type="date" name="deliverableDate[]" class="form-input">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Description & Format</label>
-                <textarea name="deliverableDesc[]" class="form-textarea" rows="2" placeholder="Detailed description of format, content, and delivery method..."></textarea>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="add-deliverable" onclick="addDeliverable()">
-            <span>+ Add Additional Deliverable</span>
-          </button>
-
-          <div style="margin-top: 32px;">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="startDate">Engagement Start Date</label>
-                <input type="date" id="startDate" name="startDate" class="form-input" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="endDate">Target Completion Date</label>
-                <input type="date" id="endDate" name="endDate" class="form-input" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="keyMilestones">Key Milestones & Dependencies</label>
-              <textarea id="keyMilestones" name="keyMilestones" class="form-textarea" rows="3" placeholder="List critical milestones, dependencies, and checkpoint reviews..."></textarea>
-            </div>
-          </div>
-        </div>
-
-        <!-- Commercial Terms -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">7</div>
-            <h3 class="section-title">Commercial Terms</h3>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="totalBudget">Total Engagement Value</label>
-              <input type="number" id="totalBudget" name="totalBudget" class="form-input" min="0" step="0.01" placeholder="0.00">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="currency">Currency</label>
-              <select id="currency" name="currency" class="form-select">
-                <option value="USD">USD ($)</option>
-                <option value="EUR">EUR (€)</option>
-                <option value="GBP">GBP (£)</option>
-                <option value="CAD">CAD (C$)</option>
-                <option value="AUD">AUD (A$)</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row">, AUD: 'A
-            <div class="form-group">
-              <label class="form-label" for="projectNumber">Project Reference</label>
-              <input type="text" id="projectNumber" name="projectNumber" class="form-input" placeholder="e.g., PRJ-2025-001">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="projectDate">Document Date</label>
-              <input type="date" id="projectDate" name="projectDate" class="form-input" required>
-            </div>
-          </div>
-        </div>
-
-        <!-- Client Information -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">2</div>
-            <h3 class="section-title">Client Information</h3>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="clientName">Client Organization</label>
-              <input type="text" id="clientName" name="clientName" class="form-input" placeholder="Company or organization name" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="clientContact">Primary Contact</label>
-              <input type="text" id="clientContact" name="clientContact" class="form-input" placeholder="Contact person name">
-            </div>
-          </div>
-          <div class="form-row-3">
-            <div class="form-group">
-              <label class="form-label" for="clientEmail">Email Address</label>
-              <input type="email" id="clientEmail" name="clientEmail" class="form-input" placeholder="contact@client.com">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="clientPhone">Phone Number</label>
-              <input type="text" id="clientPhone" name="clientPhone" class="form-input" placeholder="+1 (555) 123-4567">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="clientTitle">Contact Title</label>
-              <input type="text" id="clientTitle" name="clientTitle" class="form-input" placeholder="e.g., Project Director">
-            </div>
-          </div>
-        </div>
-
-        <!-- Service Provider Information -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">3</div>
-            <h3 class="section-title">Service Provider</h3>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="companyName">Your Organization</label>
-              <input type="text" id="companyName" name="companyName" class="form-input" placeholder="Your company name" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="projectManager">Engagement Manager</label>
-              <input type="text" id="projectManager" name="projectManager" class="form-input" placeholder="Lead consultant name">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="companyEmail">Contact Email</label>
-              <input type="email" id="companyEmail" name="companyEmail" class="form-input" placeholder="project@yourcompany.com">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="companyPhone">Contact Phone</label>
-              <input type="text" id="companyPhone" name="companyPhone" class="form-input" placeholder="+1 (555) 987-6543">
-            </div>
-          </div>
-        </div>
-
-        <!-- Executive Summary -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">4</div>
-            <h3 class="section-title">Executive Summary</h3>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="executiveSummary">Project Overview</label>
-            <textarea id="executiveSummary" name="executiveSummary" class="form-textarea" rows="4" placeholder="Provide a high-level summary of the project, its strategic importance, and expected outcomes..." required></textarea>
-            <div class="form-hint">Keep this concise but comprehensive - it's often the first section stakeholders read</div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="businessCase">Business Case & Rationale</label>
-            <textarea id="businessCase" name="businessCase" class="form-textarea" rows="3" placeholder="Explain the business justification and expected value creation..."></textarea>
-          </div>
-        </div>
-
-        <!-- Scope Definition -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">5</div>
-            <h3 class="section-title">Scope Definition</h3>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="workScope">Work to be Performed</label>
-            <textarea id="workScope" name="workScope" class="form-textarea" rows="5" placeholder="Detail the specific activities, tasks, and methodologies to be employed..." required></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="successCriteria">Success Criteria</label>
-            <textarea id="successCriteria" name="successCriteria" class="form-textarea" rows="3" placeholder="Define measurable outcomes and key performance indicators..."></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="outOfScope">Exclusions & Limitations</label>
-            <textarea id="outOfScope" name="outOfScope" class="form-textarea" rows="3" placeholder="Clearly specify what is NOT included in this engagement..."></textarea>
-          </div>
-        </div>
-
-        <!-- Deliverables & Timeline -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">6</div>
-            <h3 class="section-title">Deliverables & Timeline</h3>
-          </div>
-          <div id="deliverables">
-            <div class="deliverable-card">
-              <div class="deliverable-header">
-                <span class="deliverable-number">Deliverable 1</span>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label">Deliverable Description</label>
-                  <input type="text" name="deliverable[]" class="form-input" placeholder="e.g., Current State Assessment Report">
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Target Delivery Date</label>
-                  <input type="date" name="deliverableDate[]" class="form-input">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Description & Format</label>
-                <textarea name="deliverableDesc[]" class="form-textarea" rows="2" placeholder="Detailed description of format, content, and delivery method..."></textarea>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="add-deliverable" onclick="addDeliverable()">
-            <span>+ Add Additional Deliverable</span>
-          </button>
-
-          <div style="margin-top: 32px;">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="startDate">Engagement Start Date</label>
-                <input type="date" id="startDate" name="startDate" class="form-input" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="endDate">Target Completion Date</label>
-                <input type="date" id="endDate" name="endDate" class="form-input" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="keyMilestones">Key Milestones & Dependencies</label>
-              <textarea id="keyMilestones" name="keyMilestones" class="form-textarea" rows="3" placeholder="List critical milestones, dependencies, and checkpoint reviews..."></textarea>
-            </div>
-          </div>
-        </div>
-
-        <!-- Commercial Terms -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">7</div>
-            <h3 class="section-title">Commercial Terms</h3>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="totalBudget">Total Engagement Value</label>
-              <input type="number" id="totalBudget" name="totalBudget" class="form-input" min="0" step="0.01" placeholder="0.00">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="currency">Currency</label>
-              <select id="currency" name="currency" class="form-select">
-                <option value="USD">USD ($)</option>
-                <option value="EUR">EUR (€)</option>
-                <option value="GBP">GBP (£)</option>
-                <option value="CAD">CAD (C$)</option>
-                <option value="AUD">AUD (A$)</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row"> };
-      const symbol = currencyMap[currency] || '
-            <div class="form-group">
-              <label class="form-label" for="projectNumber">Project Reference</label>
-              <input type="text" id="projectNumber" name="projectNumber" class="form-input" placeholder="e.g., PRJ-2025-001">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="projectDate">Document Date</label>
-              <input type="date" id="projectDate" name="projectDate" class="form-input" required>
-            </div>
-          </div>
-        </div>
-
-        <!-- Client Information -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">2</div>
-            <h3 class="section-title">Client Information</h3>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="clientName">Client Organization</label>
-              <input type="text" id="clientName" name="clientName" class="form-input" placeholder="Company or organization name" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="clientContact">Primary Contact</label>
-              <input type="text" id="clientContact" name="clientContact" class="form-input" placeholder="Contact person name">
-            </div>
-          </div>
-          <div class="form-row-3">
-            <div class="form-group">
-              <label class="form-label" for="clientEmail">Email Address</label>
-              <input type="email" id="clientEmail" name="clientEmail" class="form-input" placeholder="contact@client.com">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="clientPhone">Phone Number</label>
-              <input type="text" id="clientPhone" name="clientPhone" class="form-input" placeholder="+1 (555) 123-4567">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="clientTitle">Contact Title</label>
-              <input type="text" id="clientTitle" name="clientTitle" class="form-input" placeholder="e.g., Project Director">
-            </div>
-          </div>
-        </div>
-
-        <!-- Service Provider Information -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">3</div>
-            <h3 class="section-title">Service Provider</h3>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="companyName">Your Organization</label>
-              <input type="text" id="companyName" name="companyName" class="form-input" placeholder="Your company name" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="projectManager">Engagement Manager</label>
-              <input type="text" id="projectManager" name="projectManager" class="form-input" placeholder="Lead consultant name">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="companyEmail">Contact Email</label>
-              <input type="email" id="companyEmail" name="companyEmail" class="form-input" placeholder="project@yourcompany.com">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="companyPhone">Contact Phone</label>
-              <input type="text" id="companyPhone" name="companyPhone" class="form-input" placeholder="+1 (555) 987-6543">
-            </div>
-          </div>
-        </div>
-
-        <!-- Executive Summary -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">4</div>
-            <h3 class="section-title">Executive Summary</h3>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="executiveSummary">Project Overview</label>
-            <textarea id="executiveSummary" name="executiveSummary" class="form-textarea" rows="4" placeholder="Provide a high-level summary of the project, its strategic importance, and expected outcomes..." required></textarea>
-            <div class="form-hint">Keep this concise but comprehensive - it's often the first section stakeholders read</div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="businessCase">Business Case & Rationale</label>
-            <textarea id="businessCase" name="businessCase" class="form-textarea" rows="3" placeholder="Explain the business justification and expected value creation..."></textarea>
-          </div>
-        </div>
-
-        <!-- Scope Definition -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">5</div>
-            <h3 class="section-title">Scope Definition</h3>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="workScope">Work to be Performed</label>
-            <textarea id="workScope" name="workScope" class="form-textarea" rows="5" placeholder="Detail the specific activities, tasks, and methodologies to be employed..." required></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="successCriteria">Success Criteria</label>
-            <textarea id="successCriteria" name="successCriteria" class="form-textarea" rows="3" placeholder="Define measurable outcomes and key performance indicators..."></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="outOfScope">Exclusions & Limitations</label>
-            <textarea id="outOfScope" name="outOfScope" class="form-textarea" rows="3" placeholder="Clearly specify what is NOT included in this engagement..."></textarea>
-          </div>
-        </div>
-
-        <!-- Deliverables & Timeline -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">6</div>
-            <h3 class="section-title">Deliverables & Timeline</h3>
-          </div>
-          <div id="deliverables">
-            <div class="deliverable-card">
-              <div class="deliverable-header">
-                <span class="deliverable-number">Deliverable 1</span>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label">Deliverable Description</label>
-                  <input type="text" name="deliverable[]" class="form-input" placeholder="e.g., Current State Assessment Report">
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Target Delivery Date</label>
-                  <input type="date" name="deliverableDate[]" class="form-input">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Description & Format</label>
-                <textarea name="deliverableDesc[]" class="form-textarea" rows="2" placeholder="Detailed description of format, content, and delivery method..."></textarea>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="add-deliverable" onclick="addDeliverable()">
-            <span>+ Add Additional Deliverable</span>
-          </button>
-
-          <div style="margin-top: 32px;">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="startDate">Engagement Start Date</label>
-                <input type="date" id="startDate" name="startDate" class="form-input" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="endDate">Target Completion Date</label>
-                <input type="date" id="endDate" name="endDate" class="form-input" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="keyMilestones">Key Milestones & Dependencies</label>
-              <textarea id="keyMilestones" name="keyMilestones" class="form-textarea" rows="3" placeholder="List critical milestones, dependencies, and checkpoint reviews..."></textarea>
-            </div>
-          </div>
-        </div>
-
-        <!-- Commercial Terms -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">7</div>
-            <h3 class="section-title">Commercial Terms</h3>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="totalBudget">Total Engagement Value</label>
-              <input type="number" id="totalBudget" name="totalBudget" class="form-input" min="0" step="0.01" placeholder="0.00">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="currency">Currency</label>
-              <select id="currency" name="currency" class="form-select">
-                <option value="USD">USD ($)</option>
-                <option value="EUR">EUR (€)</option>
-                <option value="GBP">GBP (£)</option>
-                <option value="CAD">CAD (C$)</option>
-                <option value="AUD">AUD (A$)</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row">;
-
-      const displayCompanyName = companyName || formData.get('companyName') || 'Your Company';
-
-      const html = '<div class="document-header"><div class="document-logo">' + (uploadedLogo ? '<img src="' + uploadedLogo + '" alt="' + displayCompanyName + ' Logo">' : '<div style="width:48px;height:48px;background:#f3f4f6;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;">🏢</div>') + '<div class="document-company">' + displayCompanyName + '</div></div><div class="document-title"><h1 style="margin:0;font-size:2.5rem;font-weight:300;">SCOPE OF WORK</h1></div></div><div class="preview-section" style="background:#f8fafc; padding:24px; border-radius:8px; margin-bottom:32px;"><h2 style="margin-top:0; color:#0f172a;">Project Information</h2><div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;"><div><p><strong>Project:</strong> ' + (formData.get('projectTitle') || 'N/A') + '</p><p><strong>Reference:</strong> ' + (formData.get('projectNumber') || 'N/A') + '</p><p><strong>Date:</strong> ' + (formData.get('projectDate') ? new Date(formData.get('projectDate')).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : today) + '</p></div><div><p><strong>Engagement Manager:</strong> ' + (formData.get('projectManager') || 'N/A') + '</p><p><strong>Service Provider:</strong> ' + displayCompanyName + '</p></div></div></div><div class="preview-section"><h2>Client Information</h2><p><strong>Organization:</strong> ' + (formData.get('clientName') || 'N/A') + '</p><p><strong>Primary Contact:</strong> ' + (formData.get('clientContact') || 'N/A') + (formData.get('clientTitle') ? ', ' + formData.get('clientTitle') : '') + '</p><p><strong>Contact Details:</strong> ' + (formData.get('clientEmail') || 'N/A') + (formData.get('clientPhone') ? ' • ' + formData.get('clientPhone') : '') + '</p></div><div class="preview-section"><h2>Service Provider</h2><p><strong>Organization:</strong> ' + displayCompanyName + '</p><p><strong>Engagement Manager:</strong> ' + (formData.get('projectManager') || 'N/A') + '</p><p><strong>Contact Details:</strong> ' + (formData.get('companyEmail') || 'N/A') + (formData.get('companyPhone') ? ' • ' + formData.get('companyPhone') : '') + '</p></div><div class="preview-section"><h2>Executive Summary</h2><p>' + (formData.get('executiveSummary') || 'No executive summary provided.') + '</p>' + (formData.get('businessCase') ? '<p><strong>Business Case:</strong> ' + formData.get('businessCase') + '</p>' : '') + '</div><div class="preview-section"><h2>Scope of Work</h2><p><strong>Work to be Performed:</strong></p><p>' + (formData.get('workScope') || 'No scope defined.') + '</p>' + (formData.get('successCriteria') ? '<p><strong>Success Criteria:</strong></p><p>' + formData.get('successCriteria') + '</p>' : '') + (formData.get('outOfScope') ? '<p><strong>Exclusions & Limitations:</strong></p><p>' + formData.get('outOfScope') + '</p>' : '') + '</div><div class="preview-section"><h2>Deliverables</h2>' + (deliverablesHtml || '<p>No deliverables specified.</p>') + '</div><div class="preview-section"><h2>Timeline</h2><p><strong>Engagement Period:</strong> ' + (formData.get('startDate') ? new Date(formData.get('startDate')).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : 'N/A') + ' to ' + (formData.get('endDate') ? new Date(formData.get('endDate')).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : 'N/A') + '</p>' + (formData.get('keyMilestones') ? '<p><strong>Key Milestones:</strong></p><p>' + formData.get('keyMilestones') + '</p>' : '') + '</div><div class="preview-section"><h2>Commercial Terms</h2><p><strong>Total Engagement Value:</strong> ' + (formData.get('totalBudget') ? symbol + parseFloat(formData.get('totalBudget')).toLocaleString() : 'To be determined') + '</p><p><strong>Payment Terms:</strong> ' + (formData.get('paymentTerms') || 'To be agreed') + '</p>' + (formData.get('expensePolicy') ? '<p><strong>Expenses:</strong> ' + formData.get('expensePolicy') + '</p>' : '') + '</div><div class="preview-section"><h2>Governance & Risk Management</h2>' + (formData.get('governance') ? '<p><strong>Project Governance:</strong></p><p>' + formData.get('governance') + '</p>' : '') + (formData.get('assumptions') ? '<p><strong>Key Assumptions:</strong></p><p>' + formData.get('assumptions') + '</p>' : '') + (formData.get('risks') ? '<p><strong>Risk Factors:</strong></p><p>' + formData.get('risks') + '</p>' : '') + '</div>' + (formData.get('terms') ? '<div class="preview-section"><h2>Additional Terms & Conditions</h2><p>' + formData.get('terms') + '</p></div>' : '') + '<div style="margin-top:48px; padding-top:24px; border-top:1px solid #e5e7eb; font-size:12px; color:#6b7280; text-align:center;"><p>This Scope of Work is generated on ' + today + ' and is subject to final review and approval by both parties.</p></div>';
-
-      document.getElementById('previewDocument').innerHTML = html;
-      document.getElementById('previewModal').style.display = 'block';
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closePreview() {
-      document.getElementById('previewModal').style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
-
-    function downloadDocument() {
-      const buttons = document.querySelectorAll('.btn-primary');
-      buttons.forEach(function(btn) {
-        btn.classList.add('loading');
-        btn.textContent = 'Generating...';
+      const today = new Date().toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
       });
 
-      if (document.getElementById('previewDocument').innerHTML.trim() === '') {
-        previewDocument();
-      }
-
-      const element = document.getElementById('previewDocument');
-      const projectTitle = document.getElementById('projectTitle').value || 'SOW_Document';
-      const todayISO = new Date().toISOString().split('T')[0];
-
-      const opt = {
-        margin: 0.5,
-        filename: 'SOW_' + projectTitle.replace(/[^a-z0-9]/gi, '_') + '_' + todayISO + '.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-      };
-
-      const previewActions = document.querySelectorAll('.preview-actions, .close-preview');
-      previewActions.forEach(function(el) {
-        el.style.display = 'none';
-      });
-
-      html2pdf()
-        .set(opt)
-        .from(element)
-        .save()
-        .then(function() {
-          previewActions.forEach(function(el) {
-            el.style.display = '';
-          });
-          buttons.forEach(function(btn) {
-            btn.classList.remove('loading');
-            btn.textContent = btn.classList.contains('btn-secondary') ? 'Preview Document' : 'Generate PDF';
-          });
-          autoSave();
-        })
-        .catch(function(error) {
-          console.error('PDF generation failed:', error);
-          buttons.forEach(function(btn) {
-            btn.classList.remove('loading');
-            btn.textContent = btn.classList.contains('btn-secondary') ? 'Preview Document' : 'Generate PDF';
-          });
-          alert('PDF generation failed. Please try again.');
-        });
-    }
-
-    function showAbout() {
-      alert('Professional SOW Generator v2.0\n\nBuilt for consulting firms and service providers to create professional Scope of Work documents quickly and efficiently.\n\nFeatures:\n• McKinsey-style professional design\n• PDF generation\n• Auto-save functionality\n• Logo upload support\n• Comprehensive template sections');
-    }
-
-    function showPrivacy() {
-      alert('Privacy Policy\n\nThis application:\n• Stores data locally in your browser only\n• Does not send data to external servers\n• Does not track user behavior\n• Uploaded logos are processed locally\n• Generated documents remain on your device\n\nYour data stays private and secure.');
-    }
-
-    document.getElementById('previewModal').addEventListener('click', function(e) {
-      if (e.target === document.getElementById('previewModal')) {
-        closePreview();
-      }
-    });
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closePreview();
-      }
-      if (e.ctrlKey && e.key.toLowerCase() === 'p') {
-        e.preventDefault();
-        previewDocument();
-      }
-      if (e.ctrlKey && e.key.toLowerCase() === 's') {
-        e.preventDefault();
-        autoSave();
-      }
-    });
-
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').catch(function() {
-          // Service worker registration failed, continue without it
-        });
-      });
-    }
-  </script>
-</body>
-</html>
-            <div class="form-group">
-              <label class="form-label" for="projectNumber">Project Reference</label>
-              <input type="text" id="projectNumber" name="projectNumber" class="form-input" placeholder="e.g., PRJ-2025-001">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="projectDate">Document Date</label>
-              <input type="date" id="projectDate" name="projectDate" class="form-input" required>
-            </div>
-          </div>
-        </div>
-
-        <!-- Client Information -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">2</div>
-            <h3 class="section-title">Client Information</h3>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="clientName">Client Organization</label>
-              <input type="text" id="clientName" name="clientName" class="form-input" placeholder="Company or organization name" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="clientContact">Primary Contact</label>
-              <input type="text" id="clientContact" name="clientContact" class="form-input" placeholder="Contact person name">
-            </div>
-          </div>
-          <div class="form-row-3">
-            <div class="form-group">
-              <label class="form-label" for="clientEmail">Email Address</label>
-              <input type="email" id="clientEmail" name="clientEmail" class="form-input" placeholder="contact@client.com">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="clientPhone">Phone Number</label>
-              <input type="text" id="clientPhone" name="clientPhone" class="form-input" placeholder="+1 (555) 123-4567">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="clientTitle">Contact Title</label>
-              <input type="text" id="clientTitle" name="clientTitle" class="form-input" placeholder="e.g., Project Director">
-            </div>
-          </div>
-        </div>
-
-        <!-- Service Provider Information -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">3</div>
-            <h3 class="section-title">Service Provider</h3>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="companyName">Your Organization</label>
-              <input type="text" id="companyName" name="companyName" class="form-input" placeholder="Your company name" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="projectManager">Engagement Manager</label>
-              <input type="text" id="projectManager" name="projectManager" class="form-input" placeholder="Lead consultant name">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="companyEmail">Contact Email</label>
-              <input type="email" id="companyEmail" name="companyEmail" class="form-input" placeholder="project@yourcompany.com">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="companyPhone">Contact Phone</label>
-              <input type="text" id="companyPhone" name="companyPhone" class="form-input" placeholder="+1 (555) 987-6543">
-            </div>
-          </div>
-        </div>
-
-        <!-- Executive Summary -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">4</div>
-            <h3 class="section-title">Executive Summary</h3>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="executiveSummary">Project Overview</label>
-            <textarea id="executiveSummary" name="executiveSummary" class="form-textarea" rows="4" placeholder="Provide a high-level summary of the project, its strategic importance, and expected outcomes..." required></textarea>
-            <div class="form-hint">Keep this concise but comprehensive - it's often the first section stakeholders read</div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="businessCase">Business Case & Rationale</label>
-            <textarea id="businessCase" name="businessCase" class="form-textarea" rows="3" placeholder="Explain the business justification and expected value creation..."></textarea>
-          </div>
-        </div>
-
-        <!-- Scope Definition -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">5</div>
-            <h3 class="section-title">Scope Definition</h3>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="workScope">Work to be Performed</label>
-            <textarea id="workScope" name="workScope" class="form-textarea" rows="5" placeholder="Detail the specific activities, tasks, and methodologies to be employed..." required></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="successCriteria">Success Criteria</label>
-            <textarea id="successCriteria" name="successCriteria" class="form-textarea" rows="3" placeholder="Define measurable outcomes and key performance indicators..."></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="outOfScope">Exclusions & Limitations</label>
-            <textarea id="outOfScope" name="outOfScope" class="form-textarea" rows="3" placeholder="Clearly specify what is NOT included in this engagement..."></textarea>
-          </div>
-        </div>
-
-        <!-- Deliverables & Timeline -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">6</div>
-            <h3 class="section-title">Deliverables & Timeline</h3>
-          </div>
-          <div id="deliverables">
-            <div class="deliverable-card">
-              <div class="deliverable-header">
-                <span class="deliverable-number">Deliverable 1</span>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label">Deliverable Description</label>
-                  <input type="text" name="deliverable[]" class="form-input" placeholder="e.g., Current State Assessment Report">
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Target Delivery Date</label>
-                  <input type="date" name="deliverableDate[]" class="form-input">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Description & Format</label>
-                <textarea name="deliverableDesc[]" class="form-textarea" rows="2" placeholder="Detailed description of format, content, and delivery method..."></textarea>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="add-deliverable" onclick="addDeliverable()">
-            <span>+ Add Additional Deliverable</span>
-          </button>
-
-          <div style="margin-top: 32px;">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="startDate">Engagement Start Date</label>
-                <input type="date" id="startDate" name="startDate" class="form-input" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="endDate">Target Completion Date</label>
-                <input type="date" id="endDate" name="endDate" class="form-input" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="keyMilestones">Key Milestones & Dependencies</label>
-              <textarea id="keyMilestones" name="keyMilestones" class="form-textarea" rows="3" placeholder="List critical milestones, dependencies, and checkpoint reviews..."></textarea>
-            </div>
-          </div>
-        </div>
-
-        <!-- Commercial Terms -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">7</div>
-            <h3 class="section-title">Commercial Terms</h3>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="totalBudget">Total Engagement Value</label>
-              <input type="number" id="totalBudget" name="totalBudget" class="form-input" min="0" step="0.01" placeholder="0.00">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="currency">Currency</label>
-              <select id="currency" name="currency" class="form-select">
-                <option value="USD">USD ($)</option>
-                <option value="EUR">EUR (€)</option>
-                <option value="GBP">GBP (£)</option>
-                <option value="CAD">CAD (C$)</option>
-                <option value="AUD">AUD (A$)</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="paymentTerms">Payment Terms</label>
-              <select id="paymentTerms" name="paymentTerms" class="form-select">
-                <option value="">Select payment structure</option>
-                <option value="Net 30 days">Net 30 days</option>
-                <option value="Net 15 days">Net 15 days</option>
-                <option value="50% upon signature, 50% upon completion">50% upon signature, 50% upon completion</option>
-                <option value="Monthly installments">Monthly installments</option>
-                <option value="Milestone-based payments">Milestone-based payments</option>
-                <option value="Time and materials">Time and materials</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="expensePolicy">Expense Policy</label>
-              <select id="expensePolicy" name="expensePolicy" class="form-select">
-                <option value="">Select expense approach</option>
-                <option value="Expenses included in fee">Expenses included in fee</option>
-                <option value="Reasonable expenses at cost">Reasonable expenses at cost</option>
-                <option value="Pre-approved expenses only">Pre-approved expenses only</option>
-                <option value="No expenses billable">No expenses billable</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <!-- Governance & Terms -->
-        <div class="section-card">
-          <div class="section-header">
-            <div class="section-number">8</div>
-            <h3 class="section-title">Governance & Terms</h3>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="governance">Project Governance</label>
-            <textarea id="governance" name="governance" class="form-textarea" rows="3" placeholder="Describe reporting structure, communication protocols, and decision-making processes..."></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="assumptions">Key Assumptions</label>
-            <textarea id="assumptions" name="assumptions" class="form-textarea" rows="3" placeholder="List critical assumptions underlying this scope and approach..."></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="risks">Risk Factors</label>
-            <textarea id="risks" name="risks" class="form-textarea" rows="3" placeholder="Identify potential risks and mitigation strategies..."></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="terms">Additional Terms & Conditions</label>
-            <textarea id="terms" name="terms" class="form-textarea" rows="4" placeholder="Include any additional contractual terms, confidentiality requirements, or special conditions..."></textarea>
-          </div>
-        </div>
-      </div>
-    </form>
-
-    <div class="action-bar">
-      <div>
-        <span id="completionStatus" style="font-size: 14px; color: #6b7280;"></span>
-      </div>
-      <div style="display: flex; gap: 12px;">
-        <button type="button" class="btn btn-secondary" onclick="previewDocument()">Preview Document</button>
-        <button type="button" class="btn btn-primary" onclick="downloadDocument()">Generate PDF</button>
-      </div>
-    </div>
-
-    <div class="footer">
-      <p>Built for professional consulting firms and service providers | <a href="#" onclick="showAbout()">About</a> | <a href="#" onclick="showPrivacy()">Privacy</a></p>
-    </div>
-  </div>
-
-  <!-- Preview Modal -->
-  <div id="previewModal" class="preview-modal">
-    <div class="preview-content">
-      <div class="preview-header">
-        <h2>Document Preview</h2>
-        <button class="close-preview" onclick="closePreview()" aria-label="Close preview">×</button>
-      </div>
-      <div id="previewDocument" class="preview-document"></div>
-      <div class="preview-actions">
-        <button type="button" class="btn btn-secondary" onclick="closePreview()">Close Preview</button>
-        <button type="button" class="btn btn-primary" onclick="downloadDocument()">Generate PDF</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Include html2pdf.js via CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <script>
-    let deliverableCount = 1;
-    let uploadedLogo = null;
-    let companyName = '';
-
-    document.addEventListener('DOMContentLoaded', function() {
-      // Set today's date
-      document.getElementById('projectDate').valueAsDate = new Date();
-      
-      // Initialize progress tracking
-      updateProgress();
-      updateCompletionStatus();
-
-      // Add event listeners to all form inputs
-      const inputs = document.querySelectorAll('input, textarea, select');
-      inputs.forEach(function(input) {
-        input.addEventListener('input', function() {
-          updateProgress();
-          updateCompletionStatus();
-        });
-      });
-
-      // Logo upload functionality
-      const logoUpload = document.getElementById('logoUpload');
-      const logoPlaceholder = document.getElementById('logoPlaceholder');
-
-      logoUpload.addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (file && file.type.startsWith('image/')) {
-          const reader = new FileReader();
-          reader.onload = function(event) {
-            uploadedLogo = event.target.result;
-            logoPlaceholder.innerHTML = '<input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo"><img src="' + uploadedLogo + '" alt="Company Logo" class="logo-image">';
-            
-            // Re-attach the event listener
-            const newLogoUpload = document.getElementById('logoUpload');
-            newLogoUpload.addEventListener('change', function(e) {
-              const file = e.target.files[0];
-              if (file && file.type.startsWith('image/')) {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                  uploadedLogo = event.target.result;
-                  logoPlaceholder.innerHTML = '<input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo"><img src="' + uploadedLogo + '" alt="Company Logo" class="logo-image">';
-                  const newerLogoUpload = document.getElementById('logoUpload');
-                  newerLogoUpload.addEventListener('change', arguments.callee);
-                };
-                reader.readAsDataURL(file);
-              }
-            });
-          };
-          reader.readAsDataURL(file);
-        }
-      });
-
-      // Company name sync between header and form
-      const headerCompanyInput = document.getElementById('headerCompanyName');
-      const formCompanyInput = document.getElementById('companyName');
-
-      headerCompanyInput.addEventListener('input', function() {
-        companyName = this.value;
-        formCompanyInput.value = this.value;
-        updateProgress();
-        updateCompletionStatus();
-      });
-
-      formCompanyInput.addEventListener('input', function() {
-        companyName = this.value;
-        headerCompanyInput.value = this.value;
-      });
-
-      // Auto-save to localStorage
-      setInterval(autoSave, 30000);
-      loadSavedData();
-    });
-
-    function autoSave() {
-      try {
-        const formData = new FormData(document.getElementById('sowForm'));
-        const data = {};
-        for (let entry of formData.entries()) {
-          const key = entry[0];
-          const value = entry[1];
-          if (data[key]) {
-            if (Array.isArray(data[key])) {
-              data[key].push(value);
-            } else {
-              data[key] = [data[key], value];
-            }
-          } else {
-            data[key] = value;
-          }
-        }
-        data.companyName = companyName;
-        data.uploadedLogo = uploadedLogo;
-        localStorage.setItem('sowGeneratorData', JSON.stringify(data));
-      } catch (e) {
-        console.log('Auto-save failed:', e);
-      }
-    }
-
-    function loadSavedData() {
-      try {
-        const saved = localStorage.getItem('sowGeneratorData');
-        if (saved) {
-          const data = JSON.parse(saved);
-          Object.keys(data).forEach(function(key) {
-            const element = document.querySelector('[name="' + key + '"]');
-            if (element && !Array.isArray(data[key])) {
-              element.value = data[key];
-            }
-          });
-          
-          if (data.companyName) {
-            document.getElementById('headerCompanyName').value = data.companyName;
-            document.getElementById('companyName').value = data.companyName;
-            companyName = data.companyName;
-          }
-          
-          if (data.uploadedLogo) {
-            uploadedLogo = data.uploadedLogo;
-            const logoPlaceholder = document.getElementById('logoPlaceholder');
-            logoPlaceholder.innerHTML = '<input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo"><img src="' + uploadedLogo + '" alt="Company Logo" class="logo-image">';
-            
-            const newLogoUpload = document.getElementById('logoUpload');
-            newLogoUpload.addEventListener('change', function(e) {
-              const file = e.target.files[0];
-              if (file && file.type.startsWith('image/')) {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                  uploadedLogo = event.target.result;
-                  logoPlaceholder.innerHTML = '<input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo"><img src="' + uploadedLogo + '" alt="Company Logo" class="logo-image">';
-                  const newerLogoUpload = document.getElementById('logoUpload');
-                  newerLogoUpload.addEventListener('change', arguments.callee);
-                };
-                reader.readAsDataURL(file);
-              }
-            });
-          }
-          
-          updateProgress();
-          updateCompletionStatus();
-        }
-      } catch (e) {
-        console.log('Load saved data failed:', e);
-      }
-    }
-
-    function addDeliverable() {
-      deliverableCount++;
-      const deliverables = document.getElementById('deliverables');
-      const card = document.createElement('div');
-      card.className = 'deliverable-card';
-      card.innerHTML = '<div class="deliverable-header"><span class="deliverable-number">Deliverable ' + deliverableCount + '</span><button type="button" class="remove-deliverable" onclick="removeDeliverable(this)">Remove</button></div><div class="form-row"><div class="form-group"><label class="form-label">Deliverable Description</label><input type="text" name="deliverable[]" class="form-input" placeholder="e.g., Implementation Roadmap"></div><div class="form-group"><label class="form-label">Target Delivery Date</label><input type="date" name="deliverableDate[]" class="form-input"></div></div><div class="form-group"><label class="form-label">Description & Format</label><textarea name="deliverableDesc[]" class="form-textarea" rows="2" placeholder="Detailed description of format, content, and delivery method..."></textarea></div>';
-      deliverables.appendChild(card);
-
-      const newFields = card.querySelectorAll('input, textarea');
-      newFields.forEach(function(field) {
-        field.addEventListener('input', function() {
-          updateProgress();
-          updateCompletionStatus();
-        });
-      });
-    }
-
-    function removeDeliverable(button) {
-      button.closest('.deliverable-card').remove();
-      updateDeliverableNumbers();
-      updateProgress();
-      updateCompletionStatus();
-    }
-
-    function updateDeliverableNumbers() {
-      const cards = document.querySelectorAll('.deliverable-card');
-      cards.forEach(function(card, index) {
-        const span = card.querySelector('.deliverable-number');
-        span.textContent = 'Deliverable ' + (index + 1);
-      });
-      deliverableCount = cards.length;
-    }
-
-    function updateProgress() {
-      const requiredFields = document.querySelectorAll('input[required], textarea[required]');
-      let completed = 0;
-      requiredFields.forEach(function(field) {
-        if (field.value.trim() !== '') completed++;
-      });
-      const pct = (completed / requiredFields.length) * 100;
-      document.getElementById('progressFill').style.width = pct + '%';
-    }
-
-    function updateCompletionStatus() {
-      const allFields = document.querySelectorAll('input, textarea, select');
-      let filled = 0;
-      const total = allFields.length;
-      allFields.forEach(function(field) {
-        if (field.value.trim() !== '') filled++;
-      });
-      const pct = Math.round((filled / total) * 100);
-      const statusEl = document.getElementById('completionStatus');
-      if (pct < 30) {
-        statusEl.innerHTML = '<span class="status-indicator status-empty"></span>Document ' + pct + '% complete';
-      } else if (pct < 80) {
-        statusEl.innerHTML = '<span class="status-indicator status-partial"></span>Document ' + pct + '% complete';
-      } else {
-        statusEl.innerHTML = '<span class="status-indicator status-complete"></span>Document ' + pct + '% complete';
-      }
-    }
-
-    function previewDocument() {
-      const formData = new FormData(document.getElementById('sowForm'));
-
-      const descEls = document.querySelectorAll('input[name="deliverable[]"]');
-      const dateEls = document.querySelectorAll('input[name="deliverableDate[]"]');
-      const detailsEls = document.querySelectorAll('textarea[name="deliverableDesc[]"]');
-      let deliverablesHtml = '';
-      
-      for (let i = 0; i < descEls.length; i++) {
-        if (descEls[i].value.trim()) {
-          deliverablesHtml += '<div style="margin-bottom:20px; padding:16px; background:#f8fafc; border-radius:8px; border-left:4px solid #0f172a;"><p style="margin:0 0 8px 0;"><strong>' + (i + 1) + '. ' + descEls[i].value + '</strong></p>';
-          if (dateEls[i].value) {
-            deliverablesHtml += '<p style="margin:0 0 8px 0; color:#6b7280; font-size:14px;"><strong>Target Date:</strong> ' + new Date(dateEls[i].value).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) + '</p>';
-          }
-          if (detailsEls[i].value) {
-            deliverablesHtml += '<p style="margin:0; color:#374151; font-size:14px;">' + detailsEls[i].value + '</p>';
-          }
-          deliverablesHtml += '</div>';
-        }
-      }
-
-      const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      // Correct currencyMap
       const currency = formData.get('currency') || 'USD';
       const currencyMap = { USD: '$', EUR: '€', GBP: '£', CAD: 'C$', AUD: 'A$' };
       const symbol = currencyMap[currency] || '$';
 
       const displayCompanyName = companyName || formData.get('companyName') || 'Your Company';
 
-      const html = '<div class="document-header"><div class="document-logo">' + (uploadedLogo ? '<img src="' + uploadedLogo + '" alt="' + displayCompanyName + ' Logo">' : '<div style="width:48px;height:48px;background:#f3f4f6;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;">🏢</div>') + '<div class="document-company">' + displayCompanyName + '</div></div><div class="document-title"><h1 style="margin:0;font-size:2.5rem;font-weight:300;">SCOPE OF WORK</h1></div></div><div class="preview-section" style="background:#f8fafc; padding:24px; border-radius:8px; margin-bottom:32px;"><h2 style="margin-top:0; color:#0f172a;">Project Information</h2><div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;"><div><p><strong>Project:</strong> ' + (formData.get('projectTitle') || 'N/A') + '</p><p><strong>Reference:</strong> ' + (formData.get('projectNumber') || 'N/A') + '</p><p><strong>Date:</strong> ' + (formData.get('projectDate') ? new Date(formData.get('projectDate')).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : today) + '</p></div><div><p><strong>Engagement Manager:</strong> ' + (formData.get('projectManager') || 'N/A') + '</p><p><strong>Service Provider:</strong> ' + displayCompanyName + '</p></div></div></div><div class="preview-section"><h2>Client Information</h2><p><strong>Organization:</strong> ' + (formData.get('clientName') || 'N/A') + '</p><p><strong>Primary Contact:</strong> ' + (formData.get('clientContact') || 'N/A') + (formData.get('clientTitle') ? ', ' + formData.get('clientTitle') : '') + '</p><p><strong>Contact Details:</strong> ' + (formData.get('clientEmail') || 'N/A') + (formData.get('clientPhone') ? ' • ' + formData.get('clientPhone') : '') + '</p></div><div class="preview-section"><h2>Service Provider</h2><p><strong>Organization:</strong> ' + displayCompanyName + '</p><p><strong>Engagement Manager:</strong> ' + (formData.get('projectManager') || 'N/A') + '</p><p><strong>Contact Details:</strong> ' + (formData.get('companyEmail') || 'N/A') + (formData.get('companyPhone') ? ' • ' + formData.get('companyPhone') : '') + '</p></div><div class="preview-section"><h2>Executive Summary</h2><p>' + (formData.get('executiveSummary') || 'No executive summary provided.') + '</p>' + (formData.get('businessCase') ? '<p><strong>Business Case:</strong> ' + formData.get('businessCase') + '</p>' : '') + '</div><div class="preview-section"><h2>Scope of Work</h2><p><strong>Work to be Performed:</strong></p><p>' + (formData.get('workScope') || 'No scope defined.') + '</p>' + (formData.get('successCriteria') ? '<p><strong>Success Criteria:</strong></p><p>' + formData.get('successCriteria') + '</p>' : '') + (formData.get('outOfScope') ? '<p><strong>Exclusions & Limitations:</strong></p><p>' + formData.get('outOfScope') + '</p>' : '') + '</div><div class="preview-section"><h2>Deliverables</h2>' + (deliverablesHtml || '<p>No deliverables specified.</p>') + '</div><div class="preview-section"><h2>Timeline</h2><p><strong>Engagement Period:</strong> ' + (formData.get('startDate') ? new Date(formData.get('startDate')).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : 'N/A') + ' to ' + (formData.get('endDate') ? new Date(formData.get('endDate')).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : 'N/A') + '</p>' + (formData.get('keyMilestones') ? '<p><strong>Key Milestones:</strong></p><p>' + formData.get('keyMilestones') + '</p>' : '') + '</div><div class="preview-section"><h2>Commercial Terms</h2><p><strong>Total Engagement Value:</strong> ' + (formData.get('totalBudget') ? symbol + parseFloat(formData.get('totalBudget')).toLocaleString() : 'To be determined') + '</p><p><strong>Payment Terms:</strong> ' + (formData.get('paymentTerms') || 'To be agreed') + '</p>' + (formData.get('expensePolicy') ? '<p><strong>Expenses:</strong> ' + formData.get('expensePolicy') + '</p>' : '') + '</div><div class="preview-section"><h2>Governance & Risk Management</h2>' + (formData.get('governance') ? '<p><strong>Project Governance:</strong></p><p>' + formData.get('governance') + '</p>' : '') + (formData.get('assumptions') ? '<p><strong>Key Assumptions:</strong></p><p>' + formData.get('assumptions') + '</p>' : '') + (formData.get('risks') ? '<p><strong>Risk Factors:</strong></p><p>' + formData.get('risks') + '</p>' : '') + '</div>' + (formData.get('terms') ? '<div class="preview-section"><h2>Additional Terms & Conditions</h2><p>' + formData.get('terms') + '</p></div>' : '') + '<div style="margin-top:48px; padding-top:24px; border-top:1px solid #e5e7eb; font-size:12px; color:#6b7280; text-align:center;"><p>This Scope of Work is generated on ' + today + ' and is subject to final review and approval by both parties.</p></div>';
+      // Compose the HTML for preview
+      const html =
+        `<div class="document-header">
+           <div class="document-logo">
+             ${uploadedLogo
+               ? `<img src="${uploadedLogo}" alt="${displayCompanyName} Logo" />`
+               : `<div style="width:48px;height:48px;background:#f3f4f6;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;">🏢</div>`
+             }
+             <div class="document-company">${displayCompanyName}</div>
+           </div>
+           <div class="document-title">
+             <h1 style="margin:0;font-size:2.5rem;font-weight:300;">SCOPE OF WORK</h1>
+           </div>
+         </div>
+
+         <div class="preview-section" style="background:#f8fafc; padding:24px; border-radius:8px; margin-bottom:32px;">
+           <h2 style="margin-top:0; color:#0f172a;">Project Information</h2>
+           <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+             <div>
+               <p><strong>Project:</strong> ${formData.get('projectTitle') || 'N/A'}</p>
+               <p><strong>Reference:</strong> ${formData.get('projectNumber') || 'N/A'}</p>
+               <p><strong>Date:</strong> ${
+                 formData.get('projectDate')
+                   ? new Date(formData.get('projectDate')).toLocaleDateString('en-US', {
+                       year: 'numeric',
+                       month: 'long',
+                       day: 'numeric'
+                     })
+                   : today
+               }</p>
+             </div>
+             <div>
+               <p><strong>Engagement Manager:</strong> ${formData.get('projectManager') || 'N/A'}</p>
+               <p><strong>Service Provider:</strong> ${displayCompanyName}</p>
+             </div>
+           </div>
+         </div>
+
+         <div class="preview-section">
+           <h2>Client Information</h2>
+           <p><strong>Organization:</strong> ${formData.get('clientName') || 'N/A'}</p>
+           <p>
+             <strong>Primary Contact:</strong> ${formData.get('clientContact') || 'N/A'}
+             ${formData.get('clientTitle') ? ', ' + formData.get('clientTitle') : ''}
+           </p>
+           <p>
+             <strong>Contact Details:</strong> ${formData.get('clientEmail') || 'N/A'}
+             ${formData.get('clientPhone') ? ' • ' + formData.get('clientPhone') : ''}
+           </p>
+         </div>
+
+         <div class="preview-section">
+           <h2>Service Provider</h2>
+           <p><strong>Organization:</strong> ${displayCompanyName}</p>
+           <p><strong>Engagement Manager:</strong> ${formData.get('projectManager') || 'N/A'}</p>
+           <p>
+             <strong>Contact Details:</strong> ${formData.get('companyEmail') || 'N/A'}
+             ${formData.get('companyPhone') ? ' • ' + formData.get('companyPhone') : ''}
+           </p>
+         </div>
+
+         <div class="preview-section">
+           <h2>Executive Summary</h2>
+           <p>${formData.get('executiveSummary') || 'No executive summary provided.'}</p>
+           ${
+             formData.get('businessCase')
+               ? `<p><strong>Business Case:</strong> ${formData.get('businessCase')}</p>`
+               : ''
+           }
+         </div>
+
+         <div class="preview-section">
+           <h2>Scope of Work</h2>
+           <p><strong>Work to be Performed:</strong></p>
+           <p>${formData.get('workScope') || 'No scope defined.'}</p>
+           ${
+             formData.get('successCriteria')
+               ? `<p><strong>Success Criteria:</strong></p><p>${formData.get('successCriteria')}</p>`
+               : ''
+           }
+           ${
+             formData.get('outOfScope')
+               ? `<p><strong>Exclusions & Limitations:</strong></p><p>${formData.get('outOfScope')}</p>`
+               : ''
+           }
+         </div>
+
+         <div class="preview-section">
+           <h2>Deliverables</h2>
+           ${deliverablesHtml || '<p>No deliverables specified.</p>'}
+         </div>
+
+         <div class="preview-section">
+           <h2>Timeline</h2>
+           <p>
+             <strong>Engagement Period:</strong>
+             ${
+               formData.get('startDate')
+                 ? new Date(formData.get('startDate')).toLocaleDateString('en-US', {
+                     year: 'numeric',
+                     month: 'long',
+                     day: 'numeric'
+                   })
+                 : 'N/A'
+             } to ${
+         formData.get('endDate')
+           ? new Date(formData.get('endDate')).toLocaleDateString('en-US', {
+               year: 'numeric',
+               month: 'long',
+               day: 'numeric'
+             })
+           : 'N/A'
+       }
+           </p>
+           ${
+             formData.get('keyMilestones')
+               ? `<p><strong>Key Milestones:</strong></p><p>${formData.get('keyMilestones')}</p>`
+               : ''
+           }
+         </div>
+
+         <div class="preview-section">
+           <h2>Commercial Terms</h2>
+           <p>
+             <strong>Total Engagement Value:</strong> ${
+               formData.get('totalBudget')
+                 ? symbol + parseFloat(formData.get('totalBudget')).toLocaleString()
+                 : 'To be determined'
+             }
+           </p>
+           <p><strong>Payment Terms:</strong> ${formData.get('paymentTerms') || 'To be agreed'}</p>
+           ${
+             formData.get('expensePolicy')
+               ? `<p><strong>Expenses:</strong> ${formData.get('expensePolicy')}</p>`
+               : ''
+           }
+         </div>
+
+         <div class="preview-section">
+           <h2>Governance & Risk Management</h2>
+           ${
+             formData.get('governance')
+               ? `<p><strong>Project Governance:</strong></p><p>${formData.get('governance')}</p>`
+               : ''
+           }
+           ${
+             formData.get('assumptions')
+               ? `<p><strong>Key Assumptions:</strong></p><p>${formData.get('assumptions')}</p>`
+               : ''
+           }
+           ${
+             formData.get('risks')
+               ? `<p><strong>Risk Factors:</strong></p><p>${formData.get('risks')}</p>`
+               : ''
+           }
+         </div>
+
+         ${
+           formData.get('terms')
+             ? `<div class="preview-section"><h2>Additional Terms & Conditions</h2><p>${formData.get('terms')}</p></div>`
+             : ''
+         }
+
+         <div style="margin-top:48px; padding-top:24px; border-top:1px solid #e5e7eb; font-size:12px; color:#6b7280; text-align:center;">
+           <p>This Scope of Work is generated on ${today} and is subject to final review and approval by both parties.</p>
+         </div>`;
 
       document.getElementById('previewDocument').innerHTML = html;
       document.getElementById('previewModal').style.display = 'block';
@@ -2309,7 +1533,7 @@
 
     function downloadDocument() {
       const buttons = document.querySelectorAll('.btn-primary');
-      buttons.forEach(function(btn) {
+      buttons.forEach(function (btn) {
         btn.classList.add('loading');
         btn.textContent = 'Generating...';
       });
@@ -2330,8 +1554,9 @@
         jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
       };
 
+      // Hide preview buttons so they don't show up in the PDF
       const previewActions = document.querySelectorAll('.preview-actions, .close-preview');
-      previewActions.forEach(function(el) {
+      previewActions.forEach(function (el) {
         el.style.display = 'none';
       });
 
@@ -2339,19 +1564,20 @@
         .set(opt)
         .from(element)
         .save()
-        .then(function() {
-          previewActions.forEach(function(el) {
+        .then(function () {
+          // Restore preview buttons
+          previewActions.forEach(function (el) {
             el.style.display = '';
           });
-          buttons.forEach(function(btn) {
+          buttons.forEach(function (btn) {
             btn.classList.remove('loading');
             btn.textContent = btn.classList.contains('btn-secondary') ? 'Preview Document' : 'Generate PDF';
           });
           autoSave();
         })
-        .catch(function(error) {
+        .catch(function (error) {
           console.error('PDF generation failed:', error);
-          buttons.forEach(function(btn) {
+          buttons.forEach(function (btn) {
             btn.classList.remove('loading');
             btn.textContent = btn.classList.contains('btn-secondary') ? 'Preview Document' : 'Generate PDF';
           });
@@ -2360,20 +1586,39 @@
     }
 
     function showAbout() {
-      alert('Professional SOW Generator v2.0\n\nBuilt for consulting firms and service providers to create professional Scope of Work documents quickly and efficiently.\n\nFeatures:\n• McKinsey-style professional design\n• PDF generation\n• Auto-save functionality\n• Logo upload support\n• Comprehensive template sections');
+      alert(
+        'Professional SOW Generator v2.0\n\n' +
+          'Built for consulting firms and service providers to create professional Scope of Work documents quickly and efficiently.\n\n' +
+          'Features:\n' +
+          '• McKinsey-style professional design\n' +
+          '• PDF generation\n' +
+          '• Auto-save functionality\n' +
+          '• Logo upload support\n' +
+          '• Comprehensive template sections'
+      );
     }
 
     function showPrivacy() {
-      alert('Privacy Policy\n\nThis application:\n• Stores data locally in your browser only\n• Does not send data to external servers\n• Does not track user behavior\n• Uploaded logos are processed locally\n• Generated documents remain on your device\n\nYour data stays private and secure.');
+      alert(
+        'Privacy Policy\n\n' +
+          'This application:\n' +
+          '• Stores data locally in your browser only\n' +
+          '• Does not send data to external servers\n' +
+          '• Does not track user behavior\n' +
+          '• Uploaded logos are processed locally\n' +
+          '• Generated documents remain on your device\n\n' +
+          'Your data stays private and secure.'
+      );
     }
 
-    document.getElementById('previewModal').addEventListener('click', function(e) {
+    // Close preview if clicking outside the content or pressing Escape
+    document.getElementById('previewModal').addEventListener('click', function (e) {
       if (e.target === document.getElementById('previewModal')) {
         closePreview();
       }
     });
 
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
         closePreview();
       }
@@ -2387,9 +1632,10 @@
       }
     });
 
+    // Optional service worker registration (unrelated to core functionality)
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').catch(function() {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js').catch(function () {
           // Service worker registration failed, continue without it
         });
       });
