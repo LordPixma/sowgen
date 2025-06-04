@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scope of Work Generator | Professional SOW Documents</title>
+  <meta name="description" content="Generate professional Scope of Work documents with our McKinsey-style template. Perfect for consultants, agencies, and service providers.">
+  <meta name="keywords" content="scope of work, SOW generator, consulting, project management, professional documents">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📋%3C/text%3E%3C/svg%3E">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Scope of Work Generator">
+  <meta property="og:description" content="Generate professional Scope of Work documents with our McKinsey-style template">
+  <meta property="og:type" content="website">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.5;
+      color: #1a1a1a;
+      background: #f8fafc;
+      font-weight: 400;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      min-height: 100vh;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+      padding: 48px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      transform: translate(50px, -50px);
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+      gap: 16px;
+    }
+
+    .logo-placeholder {
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px dashed rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-placeholder:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .logo-placeholder input[type="file"] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .logo-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .logo-placeholder span {
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .company-name-input {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 500;
+      border-bottom: 2px dashed rgba(255, 255, 255, 0.3);
+      padding: 8px 0;
+      outline: none;
+      min-width: 200px;
+    }
+
+    .company-name-input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .company-name-input:focus {
+      border-bottom-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .header h1 {
+      font-size: 2.75rem;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      color: white;
+    }
+
+    .header .subtitle {
+      font-size: 1.125rem;
+      opacity: 0.8;
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+
+    .form-container {
+      padding: 48px 40px;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 32px;
+    }
+
+    .section-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 32px;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .section-card:hover {
+      border-color: #d1d5db;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .section-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: #0f172a;
+      color: white;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      margin-right: 16px;
+    }
+
+    .section-title {
+      font-size: 1.375rem;
+      font-weight: 600;
+      color: #0f172a;
+      letter-spacing: -0.01em;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: #374151;
+      margin-bottom: 8px;
+      letter-spacing: 0.01em;
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 15px;
+      font-family: inherit;
+      background: white;
+      transition: all 0.2s ease;
+      color: #1f2937;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus {
+      outline: none;
+      border-color: #0f172a;
+      box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.1);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 100px;
+      line-height: 1.6;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .form-row-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+    }
+
+    .deliverable-card {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .deliverable-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .deliverable-number {
+      font-size: 12px;
+      font-weight: 600;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .remove-deliverable {
+      background: none;
+      border: none;
+      color: #ef4444;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+    }
+
+    .remove-deliverable:hover {
+      background: #fef2f2;
+      color: #dc2626;
+    }
+
+    .add-deliverable {
+      background: white;
+      border: 2px dashed #d1d5db;
+      border-radius: 8px;
+      padding: 16px;
+      width: 100%;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      color: #6b7280;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .add-deliverable:hover {
+      border-color: #0f172a;
+      color: #0f172a;
+      background: #f8fafc;
+    }
+
+    .action-bar {
+      background: #f8fafc;
+      border-top: 1px solid #e5e7eb;
+      padding: 32px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      border: 1px solid transparent;
+      letter-spacing: 0.01em;
+      min-width: 140px;
+    }
+
+    .btn-primary {
+      background: #0f172a;
+      color: white;
+      border-color: #0f172a;
+    }
+
+    .btn-primary:hover {
+      background: #1e293b;
+      border-color: #1e293b;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.3);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #374151;
+      border-color: #d1d5db;
+    }
+
+    .btn-secondary:hover {
+      background: #f9fafb;
+      border-color: #9ca3af;
+    }
+
+    .preview-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      overflow-y: auto;
+    }
+
+    .preview-content {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    .preview-header {
+      background: #0f172a;
+      color: white;
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .preview-header h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    .close-preview {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 4px;
+      font-size: 18px;
+    }
+
+    .close-preview:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .preview-document {
+      padding: 40px;
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+    }
+
+    .document-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .document-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .document-logo img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .document-company {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .document-title {
+      text-align: right;
+    }
+
+    .preview-document h1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      text-align: center;
+      color: #0f172a;
+      margin-bottom: 40px;
+      letter-spacing: -0.02em;
+    }
+
+    .preview-document h2 {
+      font-size: 1.375rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin: 32px 0 16px 0;
+      letter-spacing: -0.01em;
+    }
+
+    .preview-section {
+      margin-bottom: 32px;
+    }
+
+    .preview-section p {
+      margin-bottom: 8px;
+      color: #374151;
+    }
+
+    .preview-section strong {
+      color: #1f2937;
+      font-weight: 500;
+    }
+
+    .preview-actions {
+      background: #f8fafc;
+      padding: 24px 40px;
+      border-top: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    .status-indicator {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .status-complete { background: #10b981; }
+    .status-partial { background: #f59e0b; }
+    .status-empty { background: #ef4444; }
+
+    .footer {
+      background: #0f172a;
+      color: white;
+      padding: 24px 40px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .footer a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        padding: 32px 24px;
+      }
+      .header h1 {
+        font-size: 2rem;
+      }
+      .form-container {
+        padding: 32px 24px;
+      }
+      .section-card {
+        padding: 24px;
+      }
+      .form-row,
+      .form-row-3 {
+        grid-template-columns: 1fr;
+      }
+      .action-bar {
+        padding: 24px;
+        flex-direction: column;
+      }
+      .preview-document {
+        padding: 24px;
+      }
+      .preview-actions {
+        padding: 24px;
+      }
+      .document-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+      }
+      .document-title {
+        text-align: center;
+      }
+    }
+
+    .progress-bar {
+      height: 3px;
+      background: #e5e7eb;
+      border-radius: 2px;
+      margin-top: 16px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #0f172a, #1e293b);
+      border-radius: 2px;
+      transition: width 0.3s ease;
+      width: 0%;
+    }
+
+    .form-hint {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    /* Loading state */
+    .loading {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .loading::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      margin: -10px 0 0 -10px;
+      border: 2px solid #0f172a;
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+  
+  <!-- Preload Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-content">
+        <div class="logo-section">
+          <div class="logo-placeholder" id="logoPlaceholder">
+            <input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo">
+            <span id="logoIcon">🏢</span>
+          </div>
+          <input type="text" id="headerCompanyName" class="company-name-input" placeholder="Your Company Name" aria-label="Company name">
+        </div>
+        <h1>Scope of Work Generator</h1>
+        <p class="subtitle">Create professional project documentation with precision and clarity</p>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+    </div>
+
+    <form id="sowForm" class="form-container">
+      <div class="form-grid">
+        <!-- Project Information -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-number">1</div>
+            <h3 class="section-title">Project Information</h3>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="projectTitle">Project Title</label>
+            <input type="text" id="projectTitle" name="projectTitle" class="form-input" placeholder="Enter the project name" required>
+            <div class="form-hint">This will appear as the main heading in your SOW document</div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="projectNumber">Project Reference</label>
+              <input type="text" id="projectNumber" name="projectNumber" class="form-input" placeholder="e.g., PRJ-2025-001">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="projectDate">Document Date</label>
+              <input type="date" id="projectDate" name="projectDate" class="form-input" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client Information -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-number">2</div>
+            <h3 class="section-title">Client Information</h3>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="clientName">Client Organization</label>
+              <input type="text" id="clientName" name="clientName" class="form-input" placeholder="Company or organization name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="clientContact">Primary Contact</label>
+              <input type="text" id="clientContact" name="clientContact" class="form-input" placeholder="Contact person name">
+            </div>
+          </div>
+          <div class="form-row-3">
+            <div class="form-group">
+              <label class="form-label" for="clientEmail">Email Address</label>
+              <input type="email" id="clientEmail" name="clientEmail" class="form-input" placeholder="contact@client.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="clientPhone">Phone Number</label>
+              <input type="text" id="clientPhone" name="clientPhone" class="form-input" placeholder="+1 (555) 123-4567">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="clientTitle">Contact Title</label>
+              <input type="text" id="clientTitle" name="clientTitle" class="form-input" placeholder="e.g., Project Director">
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Provider Information -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-number">3</div>
+            <h3 class="section-title">Service Provider</h3>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="companyName">Your Organization</label>
+              <input type="text" id="companyName" name="companyName" class="form-input" placeholder="Your company name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="projectManager">Engagement Manager</label>
+              <input type="text" id="projectManager" name="projectManager" class="form-input" placeholder="Lead consultant name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="companyEmail">Contact Email</label>
+              <input type="email" id="companyEmail" name="companyEmail" class="form-input" placeholder="project@yourcompany.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="companyPhone">Contact Phone</label>
+              <input type="text" id="companyPhone" name="companyPhone" class="form-input" placeholder="+1 (555) 987-6543">
+            </div>
+          </div>
+        </div>
+
+        <!-- Executive Summary -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-number">4</div>
+            <h3 class="section-title">Executive Summary</h3>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="executiveSummary">Project Overview</label>
+            <textarea id="executiveSummary" name="executiveSummary" class="form-textarea" rows="4" placeholder="Provide a high-level summary of the project, its strategic importance, and expected outcomes..." required></textarea>
+            <div class="form-hint">Keep this concise but comprehensive - it's often the first section stakeholders read</div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="businessCase">Business Case & Rationale</label>
+            <textarea id="businessCase" name="businessCase" class="form-textarea" rows="3" placeholder="Explain the business justification and expected value creation..."></textarea>
+          </div>
+        </div>
+
+        <!-- Scope Definition -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-number">5</div>
+            <h3 class="section-title">Scope Definition</h3>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="workScope">Work to be Performed</label>
+            <textarea id="workScope" name="workScope" class="form-textarea" rows="5" placeholder="Detail the specific activities, tasks, and methodologies to be employed..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="successCriteria">Success Criteria</label>
+            <textarea id="successCriteria" name="successCriteria" class="form-textarea" rows="3" placeholder="Define measurable outcomes and key performance indicators..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="outOfScope">Exclusions & Limitations</label>
+            <textarea id="outOfScope" name="outOfScope" class="form-textarea" rows="3" placeholder="Clearly specify what is NOT included in this engagement..."></textarea>
+          </div>
+        </div>
+
+        <!-- Deliverables & Timeline -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-number">6</div>
+            <h3 class="section-title">Deliverables & Timeline</h3>
+          </div>
+          <div id="deliverables">
+            <div class="deliverable-card">
+              <div class="deliverable-header">
+                <span class="deliverable-number">Deliverable 1</span>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Deliverable Description</label>
+                  <input type="text" name="deliverable[]" class="form-input" placeholder="e.g., Current State Assessment Report">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Target Delivery Date</label>
+                  <input type="date" name="deliverableDate[]" class="form-input">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Description & Format</label>
+                <textarea name="deliverableDesc[]" class="form-textarea" rows="2" placeholder="Detailed description of format, content, and delivery method..."></textarea>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="add-deliverable" onclick="addDeliverable()">
+            <span>+ Add Additional Deliverable</span>
+          </button>
+
+          <div style="margin-top: 32px;">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="startDate">Engagement Start Date</label>
+                <input type="date" id="startDate" name="startDate" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="endDate">Target Completion Date</label>
+                <input type="date" id="endDate" name="endDate" class="form-input" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="keyMilestones">Key Milestones & Dependencies</label>
+              <textarea id="keyMilestones" name="keyMilestones" class="form-textarea" rows="3" placeholder="List critical milestones, dependencies, and checkpoint reviews..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercial Terms -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-number">7</div>
+            <h3 class="section-title">Commercial Terms</h3>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="totalBudget">Total Engagement Value</label>
+              <input type="number" id="totalBudget" name="totalBudget" class="form-input" min="0" step="0.01" placeholder="0.00">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="currency">Currency</label>
+              <select id="currency" name="currency" class="form-select">
+                <option value="USD">USD ($)</option>
+                <option value="EUR">EUR (€)</option>
+                <option value="GBP">GBP (£)</option>
+                <option value="CAD">CAD (C$)</option>
+                <option value="AUD">AUD (A$)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="paymentTerms">Payment Terms</label>
+              <select id="paymentTerms" name="paymentTerms" class="form-select">
+                <option value="">Select payment structure</option>
+                <option value="Net 30 days">Net 30 days</option>
+                <option value="Net 15 days">Net 15 days</option>
+                <option value="50% upon signature, 50% upon completion">50% upon signature, 50% upon completion</option>
+                <option value="Monthly installments">Monthly installments</option>
+                <option value="Milestone-based payments">Milestone-based payments</option>
+                <option value="Time and materials">Time and materials</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="expensePolicy">Expense Policy</label>
+              <select id="expensePolicy" name="expensePolicy" class="form-select">
+                <option value="">Select expense approach</option>
+                <option value="Expenses included in fee">Expenses included in fee</option>
+                <option value="Reasonable expenses at cost">Reasonable expenses at cost</option>
+                <option value="Pre-approved expenses only">Pre-approved expenses only</option>
+                <option value="No expenses billable">No expenses billable</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Governance & Terms -->
+        <div class="section-card">
+          <div class="section-header">
+            <div class="section-number">8</div>
+            <h3 class="section-title">Governance & Terms</h3>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="governance">Project Governance</label>
+            <textarea id="governance" name="governance" class="form-textarea" rows="3" placeholder="Describe reporting structure, communication protocols, and decision-making processes..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="assumptions">Key Assumptions</label>
+            <textarea id="assumptions" name="assumptions" class="form-textarea" rows="3" placeholder="List critical assumptions underlying this scope and approach..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="risks">Risk Factors</label>
+            <textarea id="risks" name="risks" class="form-textarea" rows="3" placeholder="Identify potential risks and mitigation strategies..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="terms">Additional Terms & Conditions</label>
+            <textarea id="terms" name="terms" class="form-textarea" rows="4" placeholder="Include any additional contractual terms, confidentiality requirements, or special conditions..."></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="action-bar">
+      <div>
+        <span id="completionStatus" style="font-size: 14px; color: #6b7280;"></span>
+      </div>
+      <div style="display: flex; gap: 12px;">
+        <button type="button" class="btn btn-secondary" onclick="previewDocument()">Preview Document</button>
+        <button type="button" class="btn btn-primary" onclick="downloadDocument()">Generate PDF</button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Built for professional consulting firms and service providers | <a href="#" onclick="showAbout()">About</a> | <a href="#" onclick="showPrivacy()">Privacy</a></p>
+    </div>
+  </div>
+
+  <!-- Preview Modal -->
+  <div id="previewModal" class="preview-modal">
+    <div class="preview-content">
+      <div class="preview-header">
+        <h2>Document Preview</h2>
+        <button class="close-preview" onclick="closePreview()" aria-label="Close preview">×</button>
+      </div>
+      <div id="previewDocument" class="preview-document"></div>
+      <div class="preview-actions">
+        <button type="button" class="btn btn-secondary" onclick="closePreview()">Close Preview</button>
+        <button type="button" class="btn btn-primary" onclick="downloadDocument()">Generate PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include html2pdf.js via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+    let deliverableCount = 1;
+    let uploadedLogo = null;
+    let companyName = '';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set today's date
+      document.getElementById('projectDate').valueAsDate = new Date();
+      
+      // Initialize progress tracking
+      updateProgress();
+      updateCompletionStatus();
+
+      // Add event listeners to all form inputs
+      const inputs = document.querySelectorAll('input, textarea, select');
+      inputs.forEach(input => {
+        input.addEventListener('input', () => {
+          updateProgress();
+          updateCompletionStatus();
+        });
+      });
+
+      // Logo upload functionality
+      const logoUpload = document.getElementById('logoUpload');
+      const logoPlaceholder = document.getElementById('logoPlaceholder');
+      const logoIcon = document.getElementById('logoIcon');
+
+      logoUpload.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file && file.type.startsWith('image/')) {
+          const reader = new FileReader();
+          reader.onload = function(event) {
+            uploadedLogo = event.target.result;
+            // Replace the entire placeholder content with the image, but keep the file input
+            logoPlaceholder.innerHTML = `
+              <input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo">
+              <img src="${uploadedLogo}" alt="Company Logo" class="logo-image">
+            `;
+            // Re-attach the event listener to the new file input
+            const newLogoUpload = document.getElementById('logoUpload');
+            newLogoUpload.addEventListener('change', arguments.callee);
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      // Also allow clicking on the placeholder to trigger file selection
+      logoPlaceholder.addEventListener('click', function(e) {
+        if (e.target !== logoUpload) {
+          logoUpload.click();
+        }
+      });
+
+      // Company name sync between header and form
+      const headerCompanyInput = document.getElementById('headerCompanyName');
+      const formCompanyInput = document.getElementById('companyName');
+
+      headerCompanyInput.addEventListener('input', function() {
+        companyName = this.value;
+        formCompanyInput.value = this.value;
+        updateProgress();
+        updateCompletionStatus();
+      });
+
+      formCompanyInput.addEventListener('input', function() {
+        companyName = this.value;
+        headerCompanyInput.value = this.value;
+      });
+
+      // Auto-save to localStorage (for Cloudflare hosting)
+      setInterval(autoSave, 30000); // Auto-save every 30 seconds
+      loadSavedData();
+    });
+
+    function autoSave() {
+      try {
+        const formData = new FormData(document.getElementById('sowForm'));
+        const data = {};
+        for (let [key, value] of formData.entries()) {
+          if (data[key]) {
+            if (Array.isArray(data[key])) {
+              data[key].push(value);
+            } else {
+              data[key] = [data[key], value];
+            }
+          } else {
+            data[key] = value;
+          }
+        }
+        data.companyName = companyName;
+        data.uploadedLogo = uploadedLogo;
+        localStorage.setItem('sowGeneratorData', JSON.stringify(data));
+      } catch (e) {
+        console.log('Auto-save failed:', e);
+      }
+    }
+
+    function loadSavedData() {
+      try {
+        const saved = localStorage.getItem('sowGeneratorData');
+        if (saved) {
+          const data = JSON.parse(saved);
+          // Restore form data
+          Object.keys(data).forEach(key => {
+            const element = document.querySelector(`[name="${key}"]`);
+            if (element && !Array.isArray(data[key])) {
+              element.value = data[key];
+            }
+          });
+          
+          // Restore company name and logo
+          if (data.companyName) {
+            document.getElementById('headerCompanyName').value = data.companyName;
+            document.getElementById('companyName').value = data.companyName;
+            companyName = data.companyName;
+          }
+          
+          if (data.uploadedLogo) {
+            uploadedLogo = data.uploadedLogo;
+            const logoPlaceholder = document.getElementById('logoPlaceholder');
+            logoPlaceholder.innerHTML = `
+              <input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo">
+              <img src="${uploadedLogo}" alt="Company Logo" class="logo-image">
+            `;
+            // Re-attach the event listener
+            const newLogoUpload = document.getElementById('logoUpload');
+            newLogoUpload.addEventListener('change', function(e) {
+              const file = e.target.files[0];
+              if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                  uploadedLogo = event.target.result;
+                  logoPlaceholder.innerHTML = `
+                    <input type="file" id="logoUpload" accept="image/*" aria-label="Upload company logo">
+                    <img src="${uploadedLogo}" alt="Company Logo" class="logo-image">
+                  `;
+                  const newerLogoUpload = document.getElementById('logoUpload');
+                  newerLogoUpload.addEventListener('change', arguments.callee);
+                };
+                reader.readAsDataURL(file);
+              }
+            });
+          }
+          
+          updateProgress();
+          updateCompletionStatus();
+        }
+      } catch (e) {
+        console.log('Load saved data failed:', e);
+      }
+    }
+
+    function addDeliverable() {
+      deliverableCount++;
+      const deliverables = document.getElementById('deliverables');
+      const card = document.createElement('div');
+      card.className = 'deliverable-card';
+      card.innerHTML = `
+        <div class="deliverable-header">
+          <span class="deliverable-number">Deliverable ${deliverableCount}</span>
+          <button type="button" class="remove-deliverable" onclick="removeDeliverable(this)">Remove</button>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Deliverable Description</label>
+            <input type="text" name="deliverable[]" class="form-input" placeholder="e.g., Implementation Roadmap">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Target Delivery Date</label>
+            <input type="date" name="deliverableDate[]" class="form-input">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Description & Format</label>
+          <textarea name="deliverableDesc[]" class="form-textarea" rows="2" placeholder="Detailed description of format, content, and delivery method..."></textarea>
+        </div>
+      `;
+      deliverables.appendChild(card);
+
+      // Add event listeners to new inputs
+      const newFields = card.querySelectorAll('input, textarea');
+      newFields.forEach(field => {
+        field.addEventListener('input', () => {
+          updateProgress();
+          updateCompletionStatus();
+        });
+      });
+    }
+
+    function removeDeliverable(button) {
+      button.closest('.deliverable-card').remove();
+      updateDeliverableNumbers();
+      updateProgress();
+      updateCompletionStatus();
+    }
+
+    function updateDeliverableNumbers() {
+      const cards = document.querySelectorAll('.deliverable-card');
+      cards.forEach((c, i) => {
+        const span = c.querySelector('.deliverable-number');
+        span.textContent = `Deliverable ${i + 1}`;
+      });
+      deliverableCount = cards.length;
+    }
+
+    function updateProgress() {
+      const requiredFields = document.querySelectorAll('input[required], textarea[required]');
+      let completed = 0;
+      requiredFields.forEach(f => {
+        if (f.value.trim() !== '') completed++;
+      });
+      const pct = (completed / requiredFields.length) * 100;
+      document.getElementById('progressFill').style.width = pct + '%';
+    }
+
+    function updateCompletionStatus() {
+      const allFields = document.querySelectorAll('input, textarea, select');
+      let filled = 0;
+      const total = allFields.length;
+      allFields.forEach(f => {
+        if (f.value.trim() !== '') filled++;
+      });
+      const pct = Math.round((filled / total) * 100);
+      const statusEl = document.getElementById('completionStatus');
+      if (pct < 30) {
+        statusEl.innerHTML = `<span class="status-indicator status-empty"></span>Document ${pct}% complete`;
+      } else if (pct < 80) {
+        statusEl.innerHTML = `<span class="status-indicator status-partial"></span>Document ${pct}% complete`;
+      } else {
+        statusEl.innerHTML = `<span class="status-indicator status-complete"></span>Document ${pct}% complete`;
+      }
+    }
+
+    function previewDocument() {
+      const formData = new FormData(document.getElementById('sowForm'));
+
+      // Build deliverables HTML
+      const descEls = document.querySelectorAll('input[name="deliverable[]"]');
+      const dateEls = document.querySelectorAll('input[name="deliverableDate[]"]');
+      const detailsEls = document.querySelectorAll('textarea[name="deliverableDesc[]"]');
+      let deliverablesHtml = '';
+      
+      for (let i = 0; i < descEls.length; i++) {
+        if (descEls[i].value.trim()) {
+          deliverablesHtml += `
+            <div style="margin-bottom:20px; padding:16px; background:#f8fafc; border-radius:8px; border-left:4px solid #0f172a;">
+              <p style="margin:0 0 8px 0;"><strong>${i + 1}. ${descEls[i].value}</strong></p>
+              ${dateEls[i].value ? `<p style="margin:0 0 8px 0; color:#6b7280; font-size:14px;"><strong>Target Date:</strong> ${new Date(dateEls[i].value).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>` : ''}
+              ${detailsEls[i].value ? `<p style="margin:0; color:#374151; font-size:14px;">${detailsEls[i].value}</p>` : ''}
+            </div>
+          `;
+        }
+      }
+
+      const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      const currency = formData.get('currency') || 'USD';
+      const currencyMap = { USD: '
+            , EUR: '€', GBP: '£', CAD: 'C
+            , AUD: 'A
+             };
+      const symbol = currencyMap[currency] || '
+            ;
+
+      // Company info
+      const displayCompanyName = companyName || formData.get('companyName') || 'Your Company';
+
+      // Build preview HTML with logo
+      const html = `
+        <div class="document-header">
+          <div class="document-logo">
+            ${uploadedLogo ? `<img src="${uploadedLogo}" alt="${displayCompanyName} Logo">` : '<div style="width:48px;height:48px;background:#f3f4f6;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;">🏢</div>'}
+            <div class="document-company">${displayCompanyName}</div>
+          </div>
+          <div class="document-title">
+            <h1 style="margin:0;font-size:2.5rem;font-weight:300;">SCOPE OF WORK</h1>
+          </div>
+        </div>
+
+        <div class="preview-section" style="background:#f8fafc; padding:24px; border-radius:8px; margin-bottom:32px;">
+          <h2 style="margin-top:0; color:#0f172a;">Project Information</h2>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+            <div>
+              <p><strong>Project:</strong> ${formData.get('projectTitle') || 'N/A'}</p>
+              <p><strong>Reference:</strong> ${formData.get('projectNumber') || 'N/A'}</p>
+              <p><strong>Date:</strong> ${formData.get('projectDate') ? new Date(formData.get('projectDate')).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : today}</p>
+            </div>
+            <div>
+              <p><strong>Engagement Manager:</strong> ${formData.get('projectManager') || 'N/A'}</p>
+              <p><strong>Service Provider:</strong> ${displayCompanyName}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-section">
+          <h2>Client Information</h2>
+          <p><strong>Organization:</strong> ${formData.get('clientName') || 'N/A'}</p>
+          <p><strong>Primary Contact:</strong> ${formData.get('clientContact') || 'N/A'}${formData.get('clientTitle') ? `, ${formData.get('clientTitle')}` : ''}</p>
+          <p><strong>Contact Details:</strong> ${formData.get('clientEmail') || 'N/A'}${formData.get('clientPhone') ? ` • ${formData.get('clientPhone')}` : ''}</p>
+        </div>
+
+        <div class="preview-section">
+          <h2>Service Provider</h2>
+          <p><strong>Organization:</strong> ${displayCompanyName}</p>
+          <p><strong>Engagement Manager:</strong> ${formData.get('projectManager') || 'N/A'}</p>
+          <p><strong>Contact Details:</strong> ${formData.get('companyEmail') || 'N/A'}${formData.get('companyPhone') ? ` • ${formData.get('companyPhone')}` : ''}</p>
+        </div>
+
+        <div class="preview-section">
+          <h2>Executive Summary</h2>
+          <p>${formData.get('executiveSummary') || 'No executive summary provided.'}</p>
+          ${formData.get('businessCase') ? `<p><strong>Business Case:</strong> ${formData.get('businessCase')}</p>` : ''}
+        </div>
+
+        <div class="preview-section">
+          <h2>Scope of Work</h2>
+          <p><strong>Work to be Performed:</strong></p>
+          <p>${formData.get('workScope') || 'No scope defined.'}</p>
+          ${formData.get('successCriteria') ? `<p><strong>Success Criteria:</strong></p><p>${formData.get('successCriteria')}</p>` : ''}
+          ${formData.get('outOfScope') ? `<p><strong>Exclusions & Limitations:</strong></p><p>${formData.get('outOfScope')}</p>` : ''}
+        </div>
+
+        <div class="preview-section">
+          <h2>Deliverables</h2>
+          ${deliverablesHtml || '<p>No deliverables specified.</p>'}
+        </div>
+
+        <div class="preview-section">
+          <h2>Timeline</h2>
+          <p><strong>Engagement Period:</strong> ${formData.get('startDate') ? new Date(formData.get('startDate')).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : 'N/A'} to ${formData.get('endDate') ? new Date(formData.get('endDate')).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : 'N/A'}</p>
+          ${formData.get('keyMilestones') ? `<p><strong>Key Milestones:</strong></p><p>${formData.get('keyMilestones')}</p>` : ''}
+        </div>
+
+        <div class="preview-section">
+          <h2>Commercial Terms</h2>
+          <p><strong>Total Engagement Value:</strong> ${formData.get('totalBudget') ? `${symbol}${parseFloat(formData.get('totalBudget')).toLocaleString()}` : 'To be determined'}</p>
+          <p><strong>Payment Terms:</strong> ${formData.get('paymentTerms') || 'To be agreed'}</p>
+          ${formData.get('expensePolicy') ? `<p><strong>Expenses:</strong> ${formData.get('expensePolicy')}</p>` : ''}
+        </div>
+
+        <div class="preview-section">
+          <h2>Governance & Risk Management</h2>
+          ${formData.get('governance') ? `<p><strong>Project Governance:</strong></p><p>${formData.get('governance')}</p>` : ''}
+          ${formData.get('assumptions') ? `<p><strong>Key Assumptions:</strong></p><p>${formData.get('assumptions')}</p>` : ''}
+          ${formData.get('risks') ? `<p><strong>Risk Factors:</strong></p><p>${formData.get('risks')}</p>` : ''}
+        </div>
+
+        ${formData.get('terms') ? `
+        <div class="preview-section">
+          <h2>Additional Terms & Conditions</h2>
+          <p>${formData.get('terms')}</p>
+        </div>
+        ` : ''}
+
+        <div style="margin-top:48px; padding-top:24px; border-top:1px solid #e5e7eb; font-size:12px; color:#6b7280; text-align:center;">
+          <p>This Scope of Work is generated on ${today} and is subject to final review and approval by both parties.</p>
+        </div>
+      `;
+
+      document.getElementById('previewDocument').innerHTML = html;
+      document.getElementById('previewModal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePreview() {
+      document.getElementById('previewModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    function downloadDocument() {
+      // Show loading state
+      const buttons = document.querySelectorAll('.btn-primary');
+      buttons.forEach(btn => {
+        btn.classList.add('loading');
+        btn.textContent = 'Generating...';
+      });
+
+      // Generate preview if not already done
+      if (document.getElementById('previewDocument').innerHTML.trim() === '') {
+        previewDocument();
+      }
+
+      const element = document.getElementById('previewDocument');
+      const projectTitle = document.getElementById('projectTitle').value || 'SOW_Document';
+      const todayISO = new Date().toISOString().split('T')[0];
+
+      const opt = {
+        margin: 0.5,
+        filename: `SOW_${projectTitle.replace(/[^a-z0-9]/gi, '_')}_${todayISO}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+
+      // Hide modal controls for PDF
+      const previewActions = document.querySelectorAll('.preview-actions, .close-preview');
+      previewActions.forEach(el => el.style.display = 'none');
+
+      html2pdf()
+        .set(opt)
+        .from(element)
+        .save()
+        .then(() => {
+          // Restore UI
+          previewActions.forEach(el => el.style.display = '');
+          buttons.forEach(btn => {
+            btn.classList.remove('loading');
+            btn.textContent = btn.classList.contains('btn-secondary') ? 'Preview Document' : 'Generate PDF';
+          });
+          
+          // Auto-save after successful generation
+          autoSave();
+        })
+        .catch((error) => {
+          console.error('PDF generation failed:', error);
+          buttons.forEach(btn => {
+            btn.classList.remove('loading');
+            btn.textContent = btn.classList.contains('btn-secondary') ? 'Preview Document' : 'Generate PDF';
+          });
+          alert('PDF generation failed. Please try again.');
+        });
+    }
+
+    function showAbout() {
+      alert('Professional SOW Generator v2.0\n\nBuilt for consulting firms and service providers to create professional Scope of Work documents quickly and efficiently.\n\nFeatures:\n• McKinsey-style professional design\n• PDF generation\n• Auto-save functionality\n• Logo upload support\n• Comprehensive template sections');
+    }
+
+    function showPrivacy() {
+      alert('Privacy Policy\n\nThis application:\n• Stores data locally in your browser only\n• Does not send data to external servers\n• Does not track user behavior\n• Uploaded logos are processed locally\n• Generated documents remain on your device\n\nYour data stays private and secure.');
+    }
+
+    // Modal click outside to close
+    document.getElementById('previewModal').addEventListener('click', (e) => {
+      if (e.target === document.getElementById('previewModal')) {
+        closePreview();
+      }
+    });
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closePreview();
+      }
+      if (e.ctrlKey && e.key.toLowerCase() === 'p') {
+        e.preventDefault();
+        previewDocument();
+      }
+      if (e.ctrlKey && e.key.toLowerCase() === 's') {
+        e.preventDefault();
+        autoSave();
+      }
+    });
+
+    // Performance optimization: debounce progress updates
+    let progressTimeout;
+    function debouncedUpdateProgress() {
+      clearTimeout(progressTimeout);
+      progressTimeout = setTimeout(() => {
+        updateProgress();
+        updateCompletionStatus();
+      }, 100);
+    }
+
+    // Service Worker registration for PWA capabilities (optional for Cloudflare)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {
+          // Service worker registration failed, continue without it
+        });
+      });
+    }
+  </script>
+
+  <!-- Analytics placeholder for Cloudflare -->
+  <!-- Add your Cloudflare Analytics beacon here -->
+  
+</body>
+</html>
